@@ -1,6 +1,7 @@
 nav #bt-mobile-menu {
     display: none;
 }
+
 nav ul {
     display: flex;
     flex-direction: row;

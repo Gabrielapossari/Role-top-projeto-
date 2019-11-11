@@ -10,7 +10,7 @@ nav #bt-mobile-menu {
 }
 
 header{
-    background-image: url("img/festas02.jpg");
+    background-image: url("img/.festa03");
     width: 100%;
     height:400px;
 }
@@ -94,11 +94,14 @@ section {
     flex-wrap: wrap;
     padding: 5px;
     background-color: black;
+        
+    
     
 }
 .imagens img{
-    margin: 10px;
+    margin: 100px;
     background-color: black;
+    
 }
 .QuebraTexto {
     display:flex;
@@ -186,7 +189,9 @@ Input {
         color:white;
         justify-content: space-around;
         background-color: black;
-        height:25%;
+
+        
+
         
     }
     .menu{
@@ -217,5 +222,6 @@ Input {
         color: #fff;
         font-weight: bold;
         background-color: coral;
+        width: 1000%;
     }
 }
