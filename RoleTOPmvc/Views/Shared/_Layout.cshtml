@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+    <html lang="pt-bt">
+    <meta charset="utf-8">
+
+    <head>
+        <title> Rolê TOP</title>
+        <link rel="stylesheet" type="text/css" href="css/roletop.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+
+
+    </head>
+
+    <header>
+            
+            <img src="img/logo.roletop.png" alt="logo" style="width:300; height:250px;" />
+            <br>
+            <br>
+            <br>
+            <br>
+            <nav>
+                <div class="section-container">
+                    <ul>
+                        <li id="bt-mobile-menu">
+                            <!-- HTML para colocar os ícones do FA -->
+                            <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+
+                        </li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="index.html"class="active">Home</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()"href="index.html#hamburgueres">Espaços</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="eventos.html">Eventos</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()"href="index.html#historia">Contato</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="login.html">Área do Cliente</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+@RenderBody();
+</html>
