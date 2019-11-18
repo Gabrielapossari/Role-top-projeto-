@@ -1,14 +1,15 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using System;
-using McBonalsMVC.Models;
-using McBonaldsmvc.Repositories;
+
+using McBonaldsMVC.Models;
+using McBonaldsMVC.Repositories;
 
 namespace McBonaldsmvc.Controllers
 {
     public class CadastroController : Controller
     {
-        ClienteRepository clienteRepository = new ClienteRepository();
+        ClienteRepository clienteRepositorio = new ClienteRepository();
         public IActionResult Index()
         {
             return View();
@@ -25,7 +26,8 @@ namespace McBonaldsmvc.Controllers
             form["email"],
             DateTime.Parse(form["data-nascimento"]));
 
-            clienteRepository.Inserir(cliente);
+            clienteRepositorio.Inserir(cliente);
+            
             return View("Sucesso"); 
 
             }catch (Exception e )

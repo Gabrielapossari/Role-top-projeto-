@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\McBonaldsmvc\\McBonaldsmvc.csproj",
+  "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\McBonaldsmvc\\McBonaldsMVC.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2958,7 +2958,7 @@
     ],
     "CSharpLanguageVersion": 703
   },
-  "RootNamespace": "McBonaldsmvc",
+  "RootNamespace": "McBonaldsMVC",
   "Documents": [
     {
       "FilePath": "Views\\Shared\\Error.cshtml",
@@ -3026,8 +3026,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Pedido\\Index.cshtml",
-      "TargetPath": "Views\\Pedido\\Index.cshtml",
+      "FilePath": "Views\\Pedido\\index.cshtml",
+      "TargetPath": "Views\\Pedido\\index.cshtml",
       "FileKind": "mvc"
     }
   ],

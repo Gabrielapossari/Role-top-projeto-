@@ -1,7 +1,7 @@
-namespace McBonaldsmvc.Models
+namespace McBonaldsMVC.Models
 {
     public class Shake : Produto
-    {
-        
+    { 
+
     }
 }

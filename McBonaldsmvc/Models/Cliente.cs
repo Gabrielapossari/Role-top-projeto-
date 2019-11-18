@@ -1,5 +1,5 @@
 using System;
-namespace McBonalsMVC.Models
+namespace McBonaldsMVC.Models
 {
     public class Cliente{
         public string Nome {get;set;}

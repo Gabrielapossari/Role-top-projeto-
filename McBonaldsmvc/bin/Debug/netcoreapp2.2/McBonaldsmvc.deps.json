@@ -22,17 +22,17 @@
   },
   "targets": {
     ".NETCoreApp,Version=v2.2": {
-      "McBonaldsmvc/1.0.0": {
+      "McBonaldsMVC/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0"
         },
         "runtime": {
-          "McBonaldsmvc.dll": {}
+          "McBonaldsMVC.dll": {}
         },
         "compile": {
-          "McBonaldsmvc.dll": {}
+          "McBonaldsMVC.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3232,7 +3232,7 @@
     }
   },
   "libraries": {
-    "McBonaldsmvc/1.0.0": {
+    "McBonaldsMVC/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
