@@ -32,7 +32,7 @@ namespace McBonaldsMVC.Controllers
 
 
             Hamburguer hamburguer = new Hamburguer(form["hamburguer"],hamburguerRepository.ObterPrecoDe(form["hamburguer"]));
-            Shake shake = new Shake (form["shake"],shakeRepository.ObterPrecoDe(form["shake"]));
+            // Shake shake = new Shake (form["shake"],shakeRepository.ObterPrecoDe(form["shake"]));
 
             Cliente cliente = new Cliente()
             {

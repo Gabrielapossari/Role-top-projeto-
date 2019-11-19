@@ -11,7 +11,7 @@ nav #bt-mobile-menu {
 
 header{
     background-color: black;
-    
+    width: 1905px;
 }
 
 /* nav ul{
@@ -91,14 +91,13 @@ section {
 .imagens{
     display: flex;
     flex-wrap: wrap;
-    padding: 5px;
+    padding: 200px;
     background-color: black;
-        
     
     
 }
 .imagens img{
-    margin: 100px;
+    margin: 10px;
     background-color: black;
     
 }
@@ -136,7 +135,7 @@ section {
     color:white;
     justify-content: space-around;
     background-color: black;
-    height:45%;
+    width: 1905px;
     
 }
 br {
@@ -157,7 +156,7 @@ h4 {
     font-size: 150%;
     background-position: center;
     text-align: center;
-    background-image: url("img/festas05.jpg");
+    background-image: url("festas05.jpg");
     width: 100%;
     height:400px;
     color:white;
@@ -188,9 +187,9 @@ Input {
         color:white;
         justify-content: space-around;
         background-color: black;
-
+        width: 1860px;
         
-
+        height:1000%;
         
     }
     .menu{
@@ -221,27 +220,26 @@ Input {
         color: #fff;
         font-weight: bold;
         background-color: coral;
-        width: 1000%;
-    }
-    .imagens{
-        display: flex;
-        background-position: center;
-        flex-wrap: wrap;
-        padding: 1000px;
-        background-color: black;
-        width: 1000%;
-            
-    }
-.imagens img{
-    margin: 200px;
-    background-position: center;
-    background-color: black;
-    
     }
     header{
         background-color: black;
+        width: 1895px;
         
         
     }
-    
+    .imagens{
+        /*width:1000%;
+        height:1000px;
+        */
+        background-color: black;
+        width: 1900px;
+        
+        
+    }
+    H2{
+        width: 1895px;
+    }
+    .Solicite{
+        width: 1895px;
+    }
 }
