@@ -2966,6 +2966,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Cliente\\Áreadocliente.cshtml",
+      "TargetPath": "Views\\Cliente\\Áreadocliente.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -2991,8 +2996,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Evento\\eventos.cshtml",
+      "TargetPath": "Views\\Evento\\eventos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Cadastro\\cadastro.cshtml",
+      "TargetPath": "Views\\Cadastro\\cadastro.cshtml",
       "FileKind": "mvc"
     },
     {

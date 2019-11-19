@@ -58,3 +58,6 @@ C:\Users\49541849830\Documents\Role-top-projeto-\RoleTOPmvc\obj\Debug\netcoreapp
 C:\Users\49541849830\Documents\Role-top-projeto-\RoleTOPmvc\obj\Debug\netcoreapp2.2\RoleTOPMVC.dll
 C:\Users\49541849830\Documents\Role-top-projeto-\RoleTOPmvc\obj\Debug\netcoreapp2.2\RoleTOPMVC.pdb
 C:\Users\49541849830\Documents\Role-top-projeto-\RoleTOPmvc\obj\Debug\netcoreapp2.2\RoleTOPMVC.csproj.CopyComplete
+C:\Users\49541849830\Documents\Role-top-projeto-\RoleTOPmvc\obj\Debug\netcoreapp2.2\Razor\Views\Cadastro\cadastro.g.cshtml.cs
+C:\Users\49541849830\Documents\Role-top-projeto-\RoleTOPmvc\obj\Debug\netcoreapp2.2\Razor\Views\Cliente\Áreadocliente.g.cshtml.cs
+C:\Users\49541849830\Documents\Role-top-projeto-\RoleTOPmvc\obj\Debug\netcoreapp2.2\Razor\Views\Evento\eventos.g.cshtml.cs

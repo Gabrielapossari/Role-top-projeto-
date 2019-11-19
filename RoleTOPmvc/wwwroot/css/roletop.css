@@ -11,8 +11,10 @@ nav #bt-mobile-menu {
 
 header{
     background-color: black;
+    padding: 35px;
     width: 1905px;
 }
+
 
 /* nav ul{
     display: flex;                  /* arruma o menu na horizontal/
@@ -110,6 +112,8 @@ section {
 }
 .flex{
     display:flex;
+    background-color: gray;
+    width: 2000px;
 }
 .flexdireita{
     display:flex;
@@ -211,19 +215,21 @@ Input {
     
     nav ul.mobile-mode {
         display:flex;
-        flex-direction:column;
+        
     }
     nav ul > li > a {
         display: block;
-        padding: 0.4em;
+        padding: 0.5em;
         text-decoration: none;
         color: #fff;
         font-weight: bold;
-        background-color: coral;
+        background-color: red;
+        flex-direction: column;
+        width: 500px;
     }
     header{
         background-color: black;
-        width: 1895px;
+        width: 2000px;
         
         
     }
@@ -232,14 +238,30 @@ Input {
         height:1000px;
         */
         background-color: black;
-        width: 1900px;
+        width:2000px;
+        
         
         
     }
     H2{
-        width: 1895px;
+        width: 2000px;
+        padding: 50px;
+        font-size: 35px;
     }
     .Solicite{
-        width: 1895px;
+        width: 2000px;
+        font-size: 35px;
+        padding: 80px;
+    }
+    p{
+        width: 1900;
+        font-size: 35px;
+    }
+    .festa03{
+        width: 2000;
+    }
+    .flex{
+        background-color: gray;
+        width: 2000px;
     }
 }
