@@ -15,7 +15,6 @@ namespace McBonaldsMVC.Repositories
                 File.Create(PATH).Close();
             }
         }
-
         public bool Inserir(Cliente cliente)
         {
             var linha = new string[] { PrepararRegistroCSV(cliente) };

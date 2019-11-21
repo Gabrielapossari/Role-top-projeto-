@@ -1,6 +1,4 @@
 using System;
-
-
 namespace McBonaldsMVC.Models
 {
     public class Pedido
@@ -12,5 +10,18 @@ namespace McBonaldsMVC.Models
 
         public double PrecoTotal {get;set;}
         public Shake Shake { get; internal set; }
+
+        
+        public Pedido()
+        {
+            this.Cliente = new Cliente ();
+            this.Hamburguer = new Hamburguer();
+            this.Shake = new Shake();
+        }
+
+        internal void Add(Pedido pedido)
+        {
+            
+        }
     }
 }

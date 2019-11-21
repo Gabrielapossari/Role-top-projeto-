@@ -10,7 +10,7 @@ nav #bt-mobile-menu {
 }
 
 header{
-    background-color: black;
+    background-image: url(festas02.jpg);
     padding: 35px;
     width: 1905px;
 }
@@ -249,9 +249,9 @@ Input {
         font-size: 35px;
     }
     .Solicite{
+        padding: 120px;
         width: 2000px;
         font-size: 35px;
-        padding: 80px;
     }
     p{
         width: 1900;
@@ -263,5 +263,9 @@ Input {
     .flex{
         background-color: gray;
         width: 2000px;
+    }
+    a{
+        width: 1900;
+        font-size: 35px;
     }
 }

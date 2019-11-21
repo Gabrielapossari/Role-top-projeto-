@@ -105,3 +105,4 @@ C:\Users\49541849830\Documents\Role-top-projeto-\McBonaldsmvc\obj\Debug\netcorea
 C:\Users\49541849830\Documents\Role-top-projeto-\McBonaldsmvc\obj\Debug\netcoreapp2.2\McBonaldsMVC.dll
 C:\Users\49541849830\Documents\Role-top-projeto-\McBonaldsmvc\obj\Debug\netcoreapp2.2\McBonaldsMVC.pdb
 C:\Users\49541849830\Documents\Role-top-projeto-\McBonaldsmvc\obj\Debug\netcoreapp2.2\McBonaldsMVC.csproj.CopyComplete
+C:\Users\49541849830\Documents\Role-top-projeto-\McBonaldsmvc\obj\Debug\netcoreapp2.2\Razor\Views\Cliente\Historico.g.cshtml.cs
