@@ -4,7 +4,7 @@ namespace RoleTOPmvc.Controllers
 {
     public class ClienteController : Controller
     {
-        public IActionResult Cadastro()
+        public IActionResult Áreadocliente()
         {
             return View();
         }

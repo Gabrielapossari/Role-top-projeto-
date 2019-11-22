@@ -10,12 +10,16 @@ namespace McBonaldsmvc.ViewModels
 
 
         public List<Shake> Shakes {get;set;}
+        public string NomeUsuario {get;set;}
+        public Cliente Cliente {get;set;}
         
-
         public PedidoViewModels()
         {
             this.Shakes = new List<Shake>();
             this.Hamburgueres = new List<Hamburguer>();
+            this.NomeUsuario = "Jovem";
+            this.Cliente = new Cliente();
         }
+
     }
 }
