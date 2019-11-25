@@ -2961,58 +2961,58 @@
   "RootNamespace": "RoleTOPMVC",
   "Documents": [
     {
-      "FilePath": "Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\Cliente\\Áreadocliente.cshtml",
-      "TargetPath": "Views\\Cliente\\Áreadocliente.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPmvc\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Shared\\_CookieConsentPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
+      "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPmvc\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPmvc\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Evento\\eventos.cshtml",
-      "TargetPath": "Views\\Evento\\eventos.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\_ViewStart.cshtml",
+      "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPmvc\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Cadastro\\cadastro.cshtml",
+      "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPmvc\\Views\\Evento\\eventos.cshtml",
+      "TargetPath": "Views\\Evento\\eventos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPmvc\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPmvc\\Views\\Cadastro\\cadastro.cshtml",
       "TargetPath": "Views\\Cadastro\\cadastro.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPmvc\\Views\\Cliente\\Áreadocliente.cshtml",
+      "TargetPath": "Views\\Cliente\\Áreadocliente.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPmvc\\Views\\Shared\\_CookieConsentPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPmvc\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPmvc\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
     }
   ],

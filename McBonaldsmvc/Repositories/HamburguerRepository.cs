@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using McBonaldsMVC.Models;
@@ -8,7 +7,6 @@ namespace McBonaldsMVC.Repositories
     public class HamburguerRepository
     {
         private const string PATH = "Database/Hamburguer.csv";
-
         public HamburguerRepository()
         {
             if(!File.Exists(PATH))
@@ -16,12 +14,14 @@ namespace McBonaldsMVC.Repositories
                 File.Create(PATH).Close();
             }
         }
-        public double ObterPrecoDe (string nomeHamburguer)
+
+        public double ObterPrecoDe(string nomeHamburguer)
         {
-            var List = ObterTodos();
+            var lista = ObterTodos();
             double preco = 0.0;
-            foreach (var item in List){
-                if (item.Nome.Equals(nomeHamburguer))
+            foreach (var item in lista)
+            {
+                if(item.Nome.Equals(nomeHamburguer))
                 {
                     preco = item.Preco;
                     break;
@@ -29,18 +29,18 @@ namespace McBonaldsMVC.Repositories
             }
             return preco;
         }
-        
+
         public List<Hamburguer> ObterTodos()
         {
             List<Hamburguer> hamburgueres = new List<Hamburguer>();
+
             string[] linhas = File.ReadAllLines(PATH);
-            foreach(var linha in linhas)
+            foreach (var linha in linhas)
             {
                 Hamburguer h = new Hamburguer();
                 string[] dados = linha.Split(";");
                 h.Nome = dados[0];
                 h.Preco = double.Parse(dados[1]);
-
                 hamburgueres.Add(h);
             }
             return hamburgueres;

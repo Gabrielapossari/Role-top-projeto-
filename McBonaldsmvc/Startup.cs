@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace McBonaldsmvc
+namespace McBonaldsMVC
 {
     public class Startup
     {
@@ -33,13 +33,11 @@ namespace McBonaldsmvc
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddSession(options => 
+            services.AddSession(options =>
             {
                 options.IdleTimeout = TimeSpan.FromSeconds(15);
                 options.Cookie.IsEssential = true;
-
-            }
-            );
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

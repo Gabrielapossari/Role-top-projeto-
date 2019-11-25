@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using McBonaldsMVC.Models;
 
-namespace McBonaldsmvc.ViewModels
+namespace McBonaldsMVC.ViewModels
 {
     public class HistoricoViewModel
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace McBonaldsmvc.Models
+namespace McBonaldsMVC.Models
 {
     public class ErrorViewModel
     {

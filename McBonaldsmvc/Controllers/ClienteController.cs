@@ -1,5 +1,4 @@
 using System;
-using McBonaldsmvc.Controllers;
 using McBonaldsmvc.ViewModels;
 using McBonaldsMVC.Repositories;
 using McBonaldsMVC.ViewModels;
@@ -75,6 +74,18 @@ namespace McBonaldsMVC.Controllers
                 Pedidos = pedidosCliente
 
             });
+        }
+        public IActionResult Logooff()
+        {
+            HttpContext.Session.Remove(SESSION_CLIENTE_EMAIL);
+            HttpContext.Session.Remove(SESSION_CLIENTE_NOME);
+            HttpContext.Session.Clear();
+            return RedirectToActionToAction("Index","Home");
+        }
+
+        private IActionResult RedirectToActionToAction(string v1, string v2)
+        {
+            throw new NotImplementedException();
         }
     }
 }

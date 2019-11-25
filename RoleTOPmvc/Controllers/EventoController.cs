@@ -4,7 +4,7 @@ namespace RoleTOPmvc.Controllers
 {
     public class EventoController : Controller
     {
-        public IActionResult eventos()
+        public IActionResult Index()
         {
             return View();
         }
