@@ -5,9 +5,11 @@
     box-sizing: border-box;
 }
 header{
-    background-image: url("festas02.jpg");
+    background-image: url("css/festas02.jpg");
     width: 100%;
     height:400px;
+
+
 }
 
 /* #bt-mobile-menu{
@@ -38,7 +40,7 @@ nav a {                             /* "a" = link*/
     }
 
 nav a:hover {                       /* muda o formato quando o mouse é passado por cima*/
-    background-color: red;
+    background-color: #a70000;
     box-shadow: 0 2px;    /* difusão, tamanho e cor */
   
   }
@@ -50,7 +52,9 @@ nav a:hover {                       /* muda o formato quando o mouse é passado 
     justify-content: space-around;
     background-color: black;
     color:white;
-    
+    padding: 0;
+    margin: 0;
+    border: 0;
 
 }
 .cadastro {
@@ -58,16 +62,16 @@ nav a:hover {                       /* muda o formato quando o mouse é passado 
     background-position: center;
     text-align: center;
     color: white;
-    
+    background-image: url("img/festas05.jpg");
     width: 100%;
     height:800px;
-background-color: black;
-color:white;
-
+   
+  
 }
 section {
         text-align: center;
         background-color: coral;
+        flex-direction: column;
         color:black;
         justify-content:space-between;
         position: fixed;
@@ -216,18 +220,20 @@ tr,th {
     height:1200px;
     
 }
-nav ul > li > a {
-    display: block;
-    padding: 0.5em;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    background-color:red;
-    flex-direction: column;
-    width: 80px;
+
+nav #bt-mobile-menu {
+display:block;
+
 }
-h3{
-    text-align: center;
-    background-color: black;
+nav .bt-common-menu {
+display: none;
+}
+nav .bt-common-menu.active {
+    display:block;
+}
+
+nav ul.mobile-mode {
+display:flex;
+flex-direction:column;
 }
 }

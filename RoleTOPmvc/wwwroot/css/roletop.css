@@ -10,11 +10,9 @@ nav #bt-mobile-menu {
 }
 
 header{
-    background-image: url(festas02.jpg);
-    padding: 35px;
-    width: 1905px;
+    background-color:black;
+    
 }
-
 
 /* nav ul{
     display: flex;                  /* arruma o menu na horizontal/
@@ -64,9 +62,6 @@ h2 {
     
     
 }
-.areadocliente{
-    padding: 200;
-}
 
 .section-container {
     margin: 0 auto;
@@ -79,19 +74,11 @@ h2 {
     text-decoration: none;
     font-weight: bold;
 }
-h6{
-    font-size: 20px;
-}
-.areacadastro{
-    font-size: 100%;
-    background-color: #800000;
-    
-    width: 3000px;
 
-}
 section {
     text-align: center;
     background-color:coral;
+    flex-direction: column;
     justify-content:space-between;
     position: fixed;
     left: 0;
@@ -105,13 +92,14 @@ section {
 .imagens{
     display: flex;
     flex-wrap: wrap;
-    padding: 200px;
+    padding: 5px;
     background-color: black;
+        
     
     
 }
 .imagens img{
-    margin: 10px;
+    margin: 100px;
     background-color: black;
     
 }
@@ -122,18 +110,8 @@ section {
     flex-direction: column;
     
 }
-.cadastroarea{
-    background-color: red;
-    
-    width: 3000px;
-    font-size: 100%;
-    
-}
-
 .flex{
     display:flex;
-    background-color: gray;
-    width: 2000px;
 }
 .flexdireita{
     display:flex;
@@ -148,12 +126,6 @@ section {
     justify-content: center; 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.Solicitelogin{
-    background-color: black;
-    text-align: center;
-
-
-}
 
 .festa03 {
     width: 200%;
@@ -163,8 +135,9 @@ section {
 .Solicite {
     text-align: center;
     color:white;
+    justify-content: space-around;
     background-color: black;
-    width: 1905px;
+    height:45%;
     
 }
 br {
@@ -182,25 +155,14 @@ h4 {
     font-size: 300%;
 }
 .cadastro {
-text-align: center;
-background-color:black;
-color:white;
-}
-.contato{
-    background-color: black;
-    padding: 300px;
-    color: white;
-    
-}
-.login{
-    background-color: black;
-    color:white;
+    font-size: 150%;
+    background-position: center;
     text-align: center;
-    
-
-}
-.contrato{
-    padding: 55;
+    background-image: url("img/festas05.jpg");
+    width: 100%;
+    height:400px;
+    color:white;
+    margin-bottom: 0;
 }
 h2{
     border: 0px;
@@ -225,11 +187,7 @@ Input {
     .Solicite {
         text-align: center;
         color:white;
-        justify-content: space-around;
         background-color: black;
-        width: 1860px;
-        
-        height:1000%;
         
     }
     .menu{
@@ -251,121 +209,15 @@ Input {
     
     nav ul.mobile-mode {
         display:flex;
-        
+        flex-direction:column;
     }
     nav ul > li > a {
         display: block;
-        padding: 0.5em;
+        padding: 0.4em;
         text-decoration: none;
         color: #fff;
         font-weight: bold;
-        background-color:red;
-        flex-direction: column;
-        width: 80px;
-    }
-    header{
-        background-color: black;
-        width: 3250px;
-        
-        
-    }
-    .imagens{
-        /*width:1000%;
-        height:1000px;
-        */
-        background-color: black;
-        width:20000px;
-    }
-    H2{
-        width: 3500px;
-        padding: 50px;
-        font-size: 35px;
-        text-align: center;
-    }
-    H3{
-        font-size: 100px;
-        text-align: center;
-        padding: 50px;
-        width: 3000px;
-
-    }
-    .cadastroarea{
-        background-color: red;
-        text-align: center;
-        width: 3000px;
-        font-size: 350%; 
-        padding: 200px;
-    }
-    p{
-        width: 30000;
-        font-size:400%;
-        color: black;
-
-    }
-    .flex{
-        background-color: gray;
-        width: 3250px;
-    }
-    a{
-        width: 19000;
-        font-size: 35px;
-        text-align: center;
-        
-    }
-    .contato{
-        width: 3000px;
-    }
-    .areacadastro{
-            font-size: 180%;
-            background-color:black;
-            color:white;
-            padding: 200px;
-            text-align: center;
-            width: 3000px;
-    }
-    .login{
-        background-color:black;
-        font-size: 500%;
-        padding: 900;
-        width: 3000px;
-    }
-    h6{
-        background-color: aliceblue;
-        font-size: 200%;
-
-    }
-    .Solicite {
-        text-align: center;
-        color:white;
-        justify-content: space-around;
-        background-color: black;
-        padding: 20000;
-        width: 3500px;
-        font-size: 340%;
-        
-    }
-    .Solicitelogin{
-        background-color: black;
-        text-align: center;
-        font-size: 300%;
-        padding: 20;
-        width: 3500px;
-
-    }
-    .imagemevento{
-        flex-direction: column;
-        width: 300%;
-        width:700; 
-        height:700;
-
-    }
-    h5{
-        font-size: 360%;
-    }
-    .section{
-        
-    }
-    P{
-        color:black;
+        background-color: coral;
+        width: 1000%;
     }
 }
