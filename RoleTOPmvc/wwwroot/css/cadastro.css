@@ -5,11 +5,7 @@
     box-sizing: border-box;
 }
 header{
-    background-image: url("css/festas02.jpg");
-    width: 100%;
-    height:400px;
-
-
+    background-image: url(festas02.jpg)
 }
 
 /* #bt-mobile-menu{
@@ -42,12 +38,11 @@ nav a {                             /* "a" = link*/
 nav a:hover {                       /* muda o formato quando o mouse é passado por cima*/
     background-color: #a70000;
     box-shadow: 0 2px;    /* difusão, tamanho e cor */
-  
-  }
+}
 
 /****************************************FIM DO NAV************************************************/
 
-  .Solicite {
+.Solicite {
     text-align: center;
     justify-content: space-around;
     background-color: black;
@@ -65,8 +60,6 @@ nav a:hover {                       /* muda o formato quando o mouse é passado 
     background-image: url("img/festas05.jpg");
     width: 100%;
     height:800px;
-   
-  
 }
 section {
         text-align: center;
@@ -80,8 +73,7 @@ section {
         width: 100%;
         text-align: center;
         font-size: 100%;
-        margin-bottom: 0;
- }
+        margin-bottom: 0;}
 
  /************************** Parte de baixo do site***********************/
  h4 {
@@ -128,8 +120,6 @@ font-style: oblique;
 }
 .imagens img{
     margin: 10px;
-   
-   
 }
 
 /*************************Contratar evento****************************/

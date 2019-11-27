@@ -27,7 +27,7 @@
                             </a>
 
                         </li>
-                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="Index.cshtml" class="active">Home</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="index.html" class="active">Home</a></li>
                         <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="eventos.html" class="active">Eventos</a></li>
                         <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="contato.html" class="active">Contato</a></li>
                         <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="login.html" class="active">Área do Cliente</a></li>
@@ -38,23 +38,26 @@
             </nav>
 
         </header>
+        <div class="contato">
 
-        <form name="formulario" action="http://scripts.redehost.com.br/formmail.aspx" method="post">
-            <input type=hidden name="destino" value="EmailQueVaiReceberAsMensagens">
-            <input type=hidden name="enviado" value="http://www.seudominio.xxx.yy/enviado.htm">
-            <p><b>Nome:</b><br>
-            <input type=text name="nome" size="45"></p><br>
-            <p><b>Email:</b><br>
-            <input type=text name="email" size="45"></p><br>
-            <p><b>Assunto:</b><br>
-            <input type=text name="assunto" size="45"></p><br>
-            <p><b>Mensagem:</b><br>
-            <textarea name="Mensagem" rows="10" cols="60" wrap="virtual"></textarea></p><br>
-            <p><input type="submit" value="Enviar Email"> <input type="reset" value="Limpar Formulário"></p>
-            </form>
-
-        <h2>Faça seu cadastro para mais informações</h2>
-
+            
+            <form name="formulario" action="http://scripts.redehost.com.br/formmail.aspx" method="post">
+                <input type=hidden name="destino" value="EmailQueVaiReceberAsMensagens">
+                <input type=hidden name="enviado" value="http://www.seudominio.xxx.yy/enviado.htm">
+                <p><b>Nome:</b><br>
+                    <input type=text name="nome" size="45"></p><br>
+                    <p><b>Email:</b><br>
+                        <input type=text name="email" size="45"></p><br>
+                        <p><b>Assunto:</b><br>
+                            <input type=text name="assunto" size="45"></p><br>
+                            <p><b>Mensagem:</b><br>
+                                <textarea name="Mensagem" rows="10" cols="60" wrap="virtual"></textarea></p><br>
+                                <p><input type="submit" value="Enviar Email"> <input type="reset" value="Limpar Formulário"></p>
+                            </form>
+                            
+                            <h2>Faça seu cadastro para mais informações</h2>
+                            
+                        </div>
 
         <section>
 

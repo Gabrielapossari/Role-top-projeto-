@@ -10,7 +10,7 @@ nav #bt-mobile-menu {
 }
 
 header{
-    background-color:black;
+    background-image: url(festas02.jpg)
     
 }
 
@@ -35,14 +35,14 @@ nav ul {
     font-size: 1.5em;
     list-style-type: none;
 }
-
-
-
 nav a {                             /* "a" = link*/
     text-decoration: none;          /*tira o risco de baixo do link*/
     color: oldlace;             /*muda a cor do texto*/    
     padding: .65em 3em;             /*quanto que será selecionado quando se passar o mouse por cima - vermelho - acaba dando um maior espaçamento no texto*/ 
     font-weight: bold;              /*negrito*/
+}
+h3{
+    color: red;
 }
 
 nav a:hover {                       /* muda o formato quando o mouse é passado por cima*/
@@ -126,6 +126,18 @@ section {
     justify-content: center; 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+.cadastroo{
+    background-color: black;
+    height: 750px;;
+    font-size: 25px;
+    color:white;
+    text-align: center;
+}
+.cadastro{
+    background-color: black;
+    height:2000%;
+    text-align: center;
+}
 
 .festa03 {
     width: 200%;
@@ -137,7 +149,8 @@ section {
     color:white;
     justify-content: space-around;
     background-color: black;
-    height:45%;
+    height:20%;
+    font-size: 20px;
     
 }
 br {
@@ -154,6 +167,11 @@ h5 {
 h4 {
     font-size: 300%;
 }
+.contato{
+    background-color: black;
+    color:white;
+}
+
 .cadastro {
     font-size: 150%;
     background-position: center;
@@ -167,6 +185,7 @@ h4 {
 h2{
     border: 0px;
     margin: 0;
+    
 }
 Input {
     width: 15%;
@@ -218,6 +237,7 @@ Input {
         color: #fff;
         font-weight: bold;
         background-color: coral;
+        flex-direction: column;
         width: 1000%;
     }
 }

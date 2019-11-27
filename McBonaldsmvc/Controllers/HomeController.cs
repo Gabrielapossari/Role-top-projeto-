@@ -15,8 +15,8 @@ namespace McBonaldsMVC.Controllers
         {
             return View(new BaseViewModel(){
                 NomeView = "Home",
-                UsuarioNome = ObterUsuarioSession(),
-                UsuarioEmail = ObterUsuarioSession();
+                UsuarioNome = ObterUsuarioSession()
+                UsuarioEmail = ObterUsuarioSession()
                 
             });
         public IActionResult Privacy()
