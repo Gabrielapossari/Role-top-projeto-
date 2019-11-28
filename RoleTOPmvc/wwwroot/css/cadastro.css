@@ -26,7 +26,9 @@ nav ul{
 
 nav ul li:last-child{               /*vai pegar o último filho da lista - todos li que sejam últimos filhos - para mudar o estilo*/
     font-family: 'Fredoka One', cursive;
-    }                
+}
+
+
 
 nav a {                             /* "a" = link*/
     text-decoration: none;          /*tira o risco de baixo do link*/

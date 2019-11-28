@@ -91,3 +91,4 @@ C:\Users\49541849830\Documents\Role-top-projeto-\RoleTOPMVC\obj\Debug\netcoreapp
 C:\Users\49541849830\Documents\Role-top-projeto-\RoleTOPMVC\obj\Debug\netcoreapp2.2\Razor\Views\Cadastro\Index.g.cshtml.cs
 C:\Users\49541849830\Documents\Role-top-projeto-\RoleTOPMVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\erro.g.cshtml.cs
 C:\Users\49541849830\Documents\Role-top-projeto-\RoleTOPMVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Sucesso.g.cshtml.cs
+C:\Users\49541849830\Documents\Role-top-projeto-\RoleTOPMVC\obj\Debug\netcoreapp2.2\Razor\Views\Cliente\login.g.cshtml.cs

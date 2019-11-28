@@ -1,4 +1,4 @@
-namespace McBonaldsMVC.ViewModels
+namespace RoleTOPMVC.ViewModels
 {
     public class BaseViewModel
     {

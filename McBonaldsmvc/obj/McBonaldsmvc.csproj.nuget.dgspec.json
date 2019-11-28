@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\49541849830\\Documents\\Role-top-projeto-\\McBonaldsmvc\\McBonaldsMVC.csproj": {}
+    "C:\\Users\\49541849830\\Documents\\Role-top-projeto-\\McBonaldsMVC\\McBonaldsMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\49541849830\\Documents\\Role-top-projeto-\\McBonaldsmvc\\McBonaldsMVC.csproj": {
+    "C:\\Users\\49541849830\\Documents\\Role-top-projeto-\\McBonaldsMVC\\McBonaldsMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\49541849830\\Documents\\Role-top-projeto-\\McBonaldsmvc\\McBonaldsMVC.csproj",
+        "projectUniqueName": "C:\\Users\\49541849830\\Documents\\Role-top-projeto-\\McBonaldsMVC\\McBonaldsMVC.csproj",
         "projectName": "McBonaldsMVC",
-        "projectPath": "C:\\Users\\49541849830\\Documents\\Role-top-projeto-\\McBonaldsmvc\\McBonaldsMVC.csproj",
+        "projectPath": "C:\\Users\\49541849830\\Documents\\Role-top-projeto-\\McBonaldsMVC\\McBonaldsMVC.csproj",
         "packagesPath": "C:\\Users\\49541849830\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\49541849830\\Documents\\Role-top-projeto-\\McBonaldsmvc\\obj\\",
+        "outputPath": "C:\\Users\\49541849830\\Documents\\Role-top-projeto-\\McBonaldsMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

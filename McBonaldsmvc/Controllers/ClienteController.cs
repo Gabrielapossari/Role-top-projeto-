@@ -1,5 +1,4 @@
 using System;
-using McBonaldsmvc.ViewModels;
 using McBonaldsMVC.Repositories;
 using McBonaldsMVC.ViewModels;
 using Microsoft.AspNetCore.Http;
@@ -7,9 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace McBonaldsMVC.Controllers
 {
-    public class ClienteController : AbstractController 
+    public class ClienteController : AbstractController
     {
-
 
         private ClienteRepository clienteRepository = new ClienteRepository();
         private PedidoRepository pedidoRepository = new PedidoRepository();
@@ -17,7 +15,12 @@ namespace McBonaldsMVC.Controllers
         [HttpGet]
         public IActionResult Login()
         {
-            return View();
+            return View(new BaseViewModel()
+            {
+                NomeView = "Login",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession()
+            });
         }
 
         [HttpPost]
@@ -41,7 +44,8 @@ namespace McBonaldsMVC.Controllers
                     if(cliente.Senha.Equals(senha))
                     {
                         HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
-                        HttpContext.Session.SetString(SESSION_CLIENTE_NOME, usuario);
+                        HttpContext.Session.SetString(SESSION_CLIENTE_NOME, cliente.Nome);
+                        
                         return RedirectToAction("Historico","Cliente");
                     }
                     else 
@@ -68,24 +72,21 @@ namespace McBonaldsMVC.Controllers
             var emailCliente = ObterUsuarioSession();
             var pedidosCliente = pedidoRepository.ObterTodosPorCliente(emailCliente);
 
-
             return View(new HistoricoViewModel()
             {
-                Pedidos = pedidosCliente
-
+                Pedidos = pedidosCliente,
+                NomeView = "Histórico",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession()
             });
         }
-        public IActionResult Logooff()
+
+        public IActionResult Logoff()
         {
             HttpContext.Session.Remove(SESSION_CLIENTE_EMAIL);
             HttpContext.Session.Remove(SESSION_CLIENTE_NOME);
             HttpContext.Session.Clear();
-            return RedirectToActionToAction("Index","Home");
-        }
-
-        private IActionResult RedirectToActionToAction(string v1, string v2)
-        {
-            throw new NotImplementedException();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

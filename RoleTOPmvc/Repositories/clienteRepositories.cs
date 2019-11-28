@@ -17,13 +17,33 @@ namespace RoleTOPMVC.Repositories{
         {
             var linha = new string[] { PrepararRegistroCSV(cliente) };
             File.AppendAllLines(PATH, linha);
-            
             return true;
         }
+        public Cliente ObterPor (string email)
+        {
+            var linhas = File.ReadAllLines(PATH);
+            foreach (var item in linhas)
+            {
+                if(ExtrairValorDoCampo("email", item).Equals(email))
+                {
+                    Cliente c = new Cliente();
+                    c.Nome = ExtrairValorDoCampo("nome", item);
+                    c.Email = ExtrairValorDoCampo("email", item);
+                    c.DataNascimento = 
+                    DateTime.Parse(ExtrairValorDoCampo("data_nascimento", item));
+                    c.Endereco = ExtrairValorDoCampo("endereco", item);
+                    c.Telefone = ExtrairValorDoCampo("telefone", item);
+                    c.Senha = ExtrairValorDoCampo("senha", item);
 
+                    return c;
+                }
+            }
+            return null;
+        }
             private string PrepararRegistroCSV (Cliente cliente)
         {
             return $"nome={cliente.Nome};endereco={cliente.Endereco};Telefone={cliente.Telefone};cpf={cliente.CPF};email={cliente.Email};senha={cliente.Senha}";
         }
+
     }
 }

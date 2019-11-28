@@ -32,7 +32,5 @@ namespace McBonaldsMVC.Controllers
                 return "";
             }
         }
-
-        
     }
 }
