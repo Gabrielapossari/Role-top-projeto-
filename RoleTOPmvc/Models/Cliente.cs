@@ -10,8 +10,6 @@ namespace RoleTOPMVC.Models
         public string CPF {get;set;}
         public string Email {get;set;}
         public string Senha {get;set;}
-
-
         public Cliente (string nome,string endereco,string telefone,string cpf,string email,string senha){
             this.Nome=nome;
             this.Endereco=endereco;
@@ -19,8 +17,6 @@ namespace RoleTOPMVC.Models
             this.CPF=cpf;
             this.Email=email;
             this.Senha=senha;
-
         }
     }
-
 }

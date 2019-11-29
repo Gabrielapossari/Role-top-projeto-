@@ -11,7 +11,7 @@ namespace RoleTOPMVC.Controllers
         public IActionResult Index(){
             return View();
         }
-        private clienteRepositories clienterepositories = new clienteRepositories();
+        private ClienteRepository clienterepositories = new ClienteRepository();
             public IActionResult CadastrarCliente(IFormCollection form)
             {
                 ViewData["Action"] = "Cadastro";

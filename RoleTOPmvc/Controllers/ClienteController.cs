@@ -10,7 +10,10 @@ namespace RoleTOPMVC.Controllers
 
 {   
         public class ClienteController : AbstractController    
+
         {
+            private ClienteRepository clienteRepository = new ClienteRepository();
+
             public IActionResult Login()
         {
                 return View (new BaseViewModel()
@@ -64,7 +67,5 @@ namespace RoleTOPMVC.Controllers
                 return View("Erro");
             }
         }
-    
         }
-
 }

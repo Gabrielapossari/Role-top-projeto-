@@ -4,11 +4,13 @@ using RoleTOPMVC.Models;
 using System.IO;
 
 
-namespace RoleTOPMVC.Repositories{
-    public class clienteRepositories {
+namespace RoleTOPMVC.Repositories
+{
+    public class ClienteRepository : RepositoryBase
+    {
         private const string PATH = "Database/cliente.csv";
         
-        public clienteRepositories(){
+        public ClienteRepository(){
             if(!File.Exists(PATH)){
                 File.Create(PATH).Close();
             }
@@ -28,11 +30,10 @@ namespace RoleTOPMVC.Repositories{
                 {
                     Cliente c = new Cliente();
                     c.Nome = ExtrairValorDoCampo("nome", item);
-                    c.Email = ExtrairValorDoCampo("email", item);
-                    c.DataNascimento = 
-                    DateTime.Parse(ExtrairValorDoCampo("data_nascimento", item));
                     c.Endereco = ExtrairValorDoCampo("endereco", item);
                     c.Telefone = ExtrairValorDoCampo("telefone", item);
+                    c.CPF = ExtrairValorDoCampo("cpf", item);
+                    c.Email = ExtrairValorDoCampo("email", item);
                     c.Senha = ExtrairValorDoCampo("senha", item);
 
                     return c;
