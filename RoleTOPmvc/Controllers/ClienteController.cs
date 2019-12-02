@@ -8,12 +8,16 @@ using RoleTOPMVC.ViewModels;
 
 namespace RoleTOPMVC.Controllers
 
-{   
+{  
         public class ClienteController : AbstractController    
 
         {
             private ClienteRepository clienteRepository = new ClienteRepository();
 
+        public IActionResult Index()
+        {
+            return View();
+        }
             public IActionResult Login()
         {
                 return View (new BaseViewModel()
@@ -47,19 +51,17 @@ namespace RoleTOPMVC.Controllers
                         HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
                         HttpContext.Session.SetString(SESSION_CLIENTE_NOME, cliente.Nome);
                         
-                        return RedirectToAction("Historico","Cliente");
+                        return RedirectToAction("Login","Cliente");
                     }
                     else 
                     {
                         return View("Erro", new RespostaViewModel("Senha incorreta"));
                     }
-
                 } 
                 else
                 {
                     return View("Erro", new RespostaViewModel($"Usuário {usuario} não encontrado"));
                 }
-
             }
             catch (Exception e)
             {

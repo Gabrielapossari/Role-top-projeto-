@@ -18,5 +18,9 @@ namespace RoleTOPMVC.Models
             this.Email=email;
             this.Senha=senha;
         }
+
+        public Cliente()
+        {
+        }
     }
 }

@@ -1,0 +1,128 @@
+<DOCTYPE! html>
+    <html lang="pt-bt">
+    <meta charset="utf-8">
+
+    <head>
+        <title> Rolê TOP</title>
+        <link rel="stylesheet" type="text/css" href="css/cadastro.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/roletop.css">
+        <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+    </head>
+
+    <body>
+
+        <h5>Eventos</h5>
+
+
+        <DIV class="imagens">
+
+
+            <div>
+                <img src="img/formatura.jpg" alt="festas05" style="width:350; height:350px;" />
+            </div>
+            <div>
+                <img src="img/Shows.jpg" alt="festas05" style="width:350; height:350px;" />
+            </div>
+            <div>
+                <img src="img/casamento.jpg" alt="festas05" style="width:350; height:350px;" />
+            </div>
+            <div>
+                <img src="img/aniversario.jpg" alt="festas05" style="width:350; height:350px;" />
+            </div>
+        </DIV>
+        <div class="Texto">
+            <p>O galpão Rolê TOP realiza diversos tipos de celebrações,desde de casamento até eventos públicos.</p>
+
+
+            <DIV class="imagens">
+
+
+                <div>
+                    <img src="img/sho1.jpg" alt="festas05" style="width:350; height:350px;" />
+                </div>
+                <div>
+                    <img src="img/sho2.jpg" alt="festas05" style="width:350; height:350px;" />
+                </div>
+                <div>
+                    <img src="img/sho3.png" alt="festas05" style="width:350; height:350px;" />
+                </div>
+                <div>
+                    <img src="img/sho4.jpg" alt="festas05" style="width:350; height:350px;" />
+                </div>
+            </DIV>
+
+
+
+
+        </div>
+
+        <h5>O galpão Rolê TOP dispoem de som e iluminação para seus clientes.</h5>
+        <DIV class="imagens">
+
+
+            <div>
+                <img src="img/som.jpg" alt="festas05" style="width:450; height:450px;" />
+            </div>
+            <div class="Texto">
+                <P>O galpão Rolê TOP dispoem de som e iluminação para seus clientes.</P>
+            </div>
+
+            <div>
+                <img src="img/festa01.jpg" alt="festas05" style="width:450; height:450px;" />
+            </div>
+
+        </DIV>
+        <div class="Solicite">
+
+            <br>
+            <a asp-controller="Contratar" asp-action="Index" class="active">
+
+            <h2>Contrate seu evento com o galpão Rolê TOP</h2>
+        </a>
+        
+            <br />
+            <br />
+            <br />
+            <br />
+
+        </div>
+
+        <section>
+
+            <P>Alameida Barão de Limeira, 539 Santa Cecília,São Paulo - SP 01202-001 </P>
+            <P>Telefone:(011) 3273-5000</P>
+            <P>Facebook/RolêTOP</P>
+            <p>Instagram/RolêTOP</p>
+            <a href="#">Voltar para o topo!</a>
+        </section>
+        <script>
+            function toggleMobileMenu() {
+                var ul = document.querySelector("nav ul");
+                var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+                var icon = document.querySelector(".icon > i");
+
+                ul.classList.toggle("mobile-mode");
+
+                if (icon.classList.contains("fa-bars")) {
+                    icon.classList.remove("fa-bars");
+                    icon.classList.remove("fa");
+
+                    icon.classList.add("fas");
+                    icon.classList.add("fa-times");
+                } else {
+                    icon.classList.remove("fas");
+                    icon.classList.remove("fa-times");
+
+                    icon.classList.add("fa");
+                    icon.classList.add("fa-bars");
+                }
+
+                for (var button of commonButtons) {
+                    button.classList.toggle("active");
+                }
+
+            }
+        </script>
+
+    </body>
