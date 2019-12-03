@@ -61,6 +61,7 @@ h2 {
     
 }
 
+
 .section-container {
     margin: 0 auto;
     max-width: 1360px;
@@ -130,8 +131,11 @@ section {
 }
 .cadastro{
     background-color: black;
-    height:2000%;
     text-align: center;
+    
+}
+.form{
+    background-color: black;
     
 }
 
@@ -180,6 +184,8 @@ h4 {
 h2{
     border: 0px;
     margin: 0;
+    background-color: red;
+    padding: 100px;
     
 }
 Input {

@@ -1,5 +1,5 @@
 using System;
-using McBonaldsMVC.Controllers;
+using RoleTOPMVC.Controllers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RoleTOPMVC.Models;
@@ -35,11 +35,11 @@ namespace RoleTOPMVC.Controllers
             try
             {
                 System.Console.WriteLine("==================");
-                System.Console.WriteLine(form["email"]);
+                System.Console.WriteLine(form["nome"]);
                 System.Console.WriteLine(form["senha"]);
                 System.Console.WriteLine("==================");
 
-                var usuario = form["email"];
+                var usuario = form["nome"];
                 var senha = form["senha"];
 
                 var cliente = clienteRepository.ObterPor(usuario);
@@ -51,7 +51,7 @@ namespace RoleTOPMVC.Controllers
                         HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
                         HttpContext.Session.SetString(SESSION_CLIENTE_NOME, cliente.Nome);
                         
-                        return RedirectToAction("Login","Cliente");
+                        return View("Index","Cliente");
                     }
                     else 
                     {
@@ -66,7 +66,7 @@ namespace RoleTOPMVC.Controllers
             catch (Exception e)
             {
                 System.Console.WriteLine(e.StackTrace);
-                return View("Erro");
+                return View();
             }
         }
         }
