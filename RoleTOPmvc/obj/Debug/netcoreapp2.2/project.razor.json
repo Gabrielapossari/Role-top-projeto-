@@ -3001,6 +3001,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPMVC\\Views\\Registrar\\index.cshtml",
+      "TargetPath": "Views\\Registrar\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPMVC\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -3013,11 +3018,6 @@
     {
       "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPMVC\\Views\\Login\\Index.cshtml",
       "TargetPath": "Views\\Login\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPMVC\\Views\\Registrar\\usuariocontrate.cshtml",
-      "TargetPath": "Views\\Registrar\\usuariocontrate.cshtml",
       "FileKind": "mvc"
     },
     {

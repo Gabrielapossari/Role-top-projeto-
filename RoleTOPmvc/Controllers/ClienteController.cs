@@ -31,7 +31,7 @@ namespace RoleTOPMVC.Controllers
         [HttpPost]
         public IActionResult Login(IFormCollection form)
         {
-            ViewData["Action"] = "Login";
+            ViewData["Action"] = "index";
             try
             {
                 System.Console.WriteLine("==================");
@@ -66,7 +66,13 @@ namespace RoleTOPMVC.Controllers
             catch (Exception e)
             {
                 System.Console.WriteLine(e.StackTrace);
-                return View();
+                System.Console.WriteLine();
+                System.Console.WriteLine();
+                System.Console.WriteLine();
+                System.Console.WriteLine();
+                System.Console.WriteLine();
+                System.Console.WriteLine();
+                return View("Index","Cliente");
             }
         }
         }
