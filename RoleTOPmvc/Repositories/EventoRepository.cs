@@ -4,7 +4,7 @@ using System.IO;
 using RoleTOPMVC.Models;
 using RoleTOPMVC.Repositories;
 
-namespace McBonaldsMVC.Repositories
+namespace RoleTOPMVC.Repositories
 {
     public class EventoRepository : RepositoryBase 
     {
@@ -13,21 +13,19 @@ namespace McBonaldsMVC.Repositories
             if (!File.Exists (PATH)) {
                 File.Create (PATH).Close ();
             }
-
         }
-        public bool Inserir (Evento evento) {
-            var quantidadePedidos = File.ReadAllLines(PATH).Length;
-            evento.Id = (ulong) ++quantidadePedidos;
-            var linha = new string[] { PrepararPedidoCSV (evento) };
-            File.AppendAllLines (PATH, linha);
-
+        public bool Inserir (Evento evento) 
+        {
+            var linha = new string[] { PrepararPedidoCSV(evento) };
+            File.AppendAllLines(PATH, linha);
             return true;
         }
 
         private string PrepararPedidoCSV (Evento evento) {
+            
             Cliente c = evento.Cliente;
 
-            return $"id={evento.Id};status_pedido={evento.Status};cliente_nome={c.Nome};cliente_email={c.Email};evento_DataFesta={evento.DataFesta};evento_TipoFesta={evento.TipoFesta};evento_QuantsPessoas={evento.QuantPessoas};evento_Horario={evento.Horario};evento_Servicos={evento.Servicos};evento_PrecoTotal={evento.PrecoTotal};";
+            return $"nome={c.Nome};email={c.Email};DataFesta={evento.DataFesta};TipoFesta={evento.TipoFesta};QuantsPessoas={evento.QuantsPessoas};Horario={evento.Horario};Servicos={evento.Servicos}";
         }
     }
 }

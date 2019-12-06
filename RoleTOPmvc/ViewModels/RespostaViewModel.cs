@@ -1,6 +1,6 @@
-namespace RoleTOPMVC.Repositories
+namespace RoleTOPMVC.ViewModels
 {
-    public class RespostaViewModel
+    public class RespostaViewModel : BaseViewModel
     {
         public string Mensagem {get;set;}
 
@@ -8,6 +8,7 @@ namespace RoleTOPMVC.Repositories
         {
 
         }
+
         public RespostaViewModel(string mensagem)
         {
             this.Mensagem = mensagem;
