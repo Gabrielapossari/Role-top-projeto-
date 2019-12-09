@@ -51,8 +51,12 @@ namespace RoleTOPMVC.Controllers
                             return View("Index","Administrador");
                         }else
                         {
-                            return View("Index","Cliente");
-
+                            return View("Index",new BaseViewModel()
+                        {
+                            NomeView = "Index",
+                            UsuarioEmail = ObterUsuarioSession(),
+                            UsuarioNome = ObterUsuarioNomeSession()
+                        });
                         }
                     }
                     else 

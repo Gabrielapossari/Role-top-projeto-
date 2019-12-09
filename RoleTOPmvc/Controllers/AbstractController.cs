@@ -8,7 +8,7 @@ namespace RoleTOPMVC.Controllers
         protected const string SESSION_CLIENTE_EMAIL = "cliente_email";
         protected const string SESSION_CLIENTE_NOME = "cliente_nome";
 
-        protected string ObterUsuarioSession()
+        public string ObterUsuarioSession()
         {
             var email = HttpContext.Session.GetString(SESSION_CLIENTE_EMAIL);
             if (!string.IsNullOrEmpty(email))

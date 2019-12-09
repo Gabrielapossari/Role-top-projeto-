@@ -14,7 +14,8 @@ namespace RoleTOPMVC.Controllers
             return View(new BaseViewModel()
             {
                 NomeView = "Cadastro",
-                
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession()
             });
         }
         private ClienteRepository clienterepositories = new ClienteRepository();
