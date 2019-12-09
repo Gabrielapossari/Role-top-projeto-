@@ -13,21 +13,17 @@ namespace RoleTOPMVC.Controllers
 
         {
             private ClienteRepository clienteRepository = new ClienteRepository();
-
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult Login()
         {
-            return View();
-        }
-            public IActionResult Login()
-        {
-                return View (new BaseViewModel()
+            return View(new BaseViewModel()
             {
                 NomeView = "Login",
                 UsuarioEmail = ObterUsuarioSession(),
                 UsuarioNome = ObterUsuarioNomeSession()
             });
         }
-        
+
         [HttpPost]
         public IActionResult Login(IFormCollection form)
         {
@@ -50,8 +46,14 @@ namespace RoleTOPMVC.Controllers
                     {
                         HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
                         HttpContext.Session.SetString(SESSION_CLIENTE_NOME, cliente.Nome);
-                        
-                        return View("Index","Cliente");
+                        if(ObterUsuarioSession() == "admin@hotmail.com")
+                        {
+                            return View("Index","Administrador");
+                        }else
+                        {
+                            return View("Index","Cliente");
+
+                        }
                     }
                     else 
                     {

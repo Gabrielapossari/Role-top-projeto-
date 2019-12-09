@@ -13,36 +13,42 @@ namespace RoleTOPMVC.Controllers
 {
     public class EventoController : AbstractController
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
         private ClienteRepository clienterepository = new ClienteRepository();
         private EventoRepository eventoRepository = new EventoRepository();
+
+        [HttpGet]
+        public IActionResult Index()
+        {
+            return View(new BaseViewModel()
+            {
+                NomeView = "Evento"
+            });
+        }
+
+        [HttpPost]
             public IActionResult CadastrarEvento(IFormCollection form)
             {
-                ViewData["Action"] = "Evento";
                 try {
                     Evento evento = new Evento
                     (
-                    clienterepository.ObterPor(ObterUsuarioSession()),
-                    form["nome"],
-                    form["email"],
+                    // clienterepository.ObterPor(ObterUsuarioSession()),
+                    form["Nome"],
+                    form["Email"],
                     DateTime.Parse(form["DataFesta"]),
                     form["TipoFesta"],
                     form["QuantsPessoas"],
-                    int.Parse(form["Horario"]),
+                    form["Horario"],
                     form["Servicos"],
                     form["Espacos"]);
-                        
                     eventoRepository.Inserir(evento);
                     
-                    return View("Sucesso");
-                } 
-                catch(Exception e)
-                {
-                    return View("Erro");
-                }
+                return View("Sucesso", new RespostaViewModel("Evento cadastrado!"));
+            } 
+            catch(Exception e)
+            {
+                System.Console.WriteLine(e.StackTrace);
+                return View("Erro", new RespostaViewModel("Não foi possivel cadastrar o evento!"));
             }
+        }
     }
 }

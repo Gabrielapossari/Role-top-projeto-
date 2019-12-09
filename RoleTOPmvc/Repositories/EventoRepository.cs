@@ -21,11 +21,30 @@ namespace RoleTOPMVC.Repositories
             return true;
         }
 
+
+            public List<Evento> ObterTodos () {
+            var linhas = File.ReadAllLines (PATH);
+            List<Evento> eventos = new List<Evento>();
+
+            foreach (var linha in linhas) {
+                Evento evento = new Evento ();
+                evento.Cliente.Nome = ExtrairValorDoCampo("Nome", linha);
+                evento.Cliente.Email = ExtrairValorDoCampo("Email",linha);
+                evento.DataFesta = DateTime.Parse(ExtrairValorDoCampo("DataFesta", linha));
+                evento.TipoFesta = ExtrairValorDoCampo("TipoFesta", linha);
+                evento.QuantsPessoas = ExtrairValorDoCampo("Quantspessoas", linha);
+                evento.Horario = ExtrairValorDoCampo("Horario",linha);
+                evento.Servicos = ExtrairValorDoCampo("Servicos", linha);
+                evento.Espacos = ExtrairValorDoCampo("Espacos", linha);
+                eventos.Add(evento);
+            }
+            return eventos;
+        }
         private string PrepararPedidoCSV (Evento evento) {
             
             Cliente c = evento.Cliente;
 
-            return $"nome={c.Nome};email={c.Email};DataFesta={evento.DataFesta};TipoFesta={evento.TipoFesta};QuantsPessoas={evento.QuantsPessoas};Horario={evento.Horario};Servicos={evento.Servicos}";
+            return $"nome={evento.Nome};email={evento.Email};DataFesta={evento.DataFesta};TipoFesta={evento.TipoFesta};QuantsPessoas={evento.QuantsPessoas};Horario={evento.Horario};Servicos={evento.Servicos};Espacos={evento.Espacos}";
         }
     }
 }
