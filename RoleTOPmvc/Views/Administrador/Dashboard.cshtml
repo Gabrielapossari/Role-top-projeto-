@@ -1,20 +1,25 @@
 @model RoleTOPMVC.ViewModels.DashboardViewModel
 <table style="width:100%" class="Tabela">
             <tr>
-                <th>Evento</th>
-                <th>Tipo</th>
-                <th>Data</th>
-                <th>Horário</th>
-                <th>Situação</th>
-            </tr>
-
-            <tr>
-                <td>0968597</td>
-                <td>Balada</td>
-                <td>18/05/2018</td>
-                <td>00:00</td>
-                <td><input type="checkbox"></td>
-            </tr>
+        <main>
+                    <h2>Dashboard</h2>
+                    <section id="status-pedidos">
+                        <h3>Status dos pedidos</h3>
+                        <div id="painel">
+                        <div class="box-status-pedidos aprovados">
+                        <h4>Aprovados</h4>
+                        <p>@Model.EventosAprovados</p>
+                        </div>
+                        <div class="box-status-pedidos pendentes">
+                        <h4>Pendentes</h4>
+                        <p>@Model.EventosPendentes</p>
+                        </div>
+                        <div class="box-status-pedidos reprovados">
+                        <h4>Reprovados</h4>
+                        <p>@Model.EventosReprovados</p>
+                        </div>
+                        </div>
+                        </section>
 
             </tr>
         </table>
@@ -31,27 +36,20 @@
                 var ul = document.querySelector("nav ul");
                 var commonButtons = document.querySelectorAll("nav .bt-common-menu");
                 var icon = document.querySelector(".icon > i");
-
                 ul.classList.toggle("mobile-mode");
-
                 if (icon.classList.contains("fa-bars")) {
                     icon.classList.remove("fa-bars");
                     icon.classList.remove("fa");
-
                     icon.classList.add("fas");
                     icon.classList.add("fa-times");
                 } else {
                     icon.classList.remove("fas");
                     icon.classList.remove("fa-times");
-
                     icon.classList.add("fa");
                     icon.classList.add("fa-bars");
                 }
-
                 for (var button of commonButtons) {
                     button.classList.toggle("active");
                 }
-
             }
         </script>
-

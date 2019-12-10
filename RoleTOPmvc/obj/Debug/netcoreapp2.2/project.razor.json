@@ -3016,8 +3016,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPMVC\\Views\\Login\\Index.cshtml",
-      "TargetPath": "Views\\Login\\Index.cshtml",
+      "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPMVC\\Views\\Login\\index.cshtml",
+      "TargetPath": "Views\\Login\\index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -3033,6 +3033,11 @@
     {
       "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPMVC\\Views\\Shared\\_CookieConsentPartial.cshtml",
       "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPMVC\\Views\\Administrador\\Dashboard.cshtml",
+      "TargetPath": "Views\\Administrador\\Dashboard.cshtml",
       "FileKind": "mvc"
     },
     {

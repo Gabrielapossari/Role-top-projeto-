@@ -1,6 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RoleTOPMVC.Enums;
 using RoleTOPMVC.Models;
 using RoleTOPMVC.Repositories;
 using RoleTOPMVC.ViewModels;
@@ -31,6 +32,8 @@ namespace RoleTOPMVC.Controllers
                         form["email"],
                         form["senha"]
                     );
+
+                    cliente.TipoUsuario = (uint) TiposUsuario.CLIENTE;
                         
                     clienterepositories.Inserir(cliente);
                 

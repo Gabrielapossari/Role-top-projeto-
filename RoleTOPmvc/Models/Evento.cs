@@ -1,9 +1,11 @@
 using System;
+using RoleTOPMVC.Enums;
 
 namespace RoleTOPMVC.Models
 {
     public class Evento
     {
+        public uint Status {get;set;}
         public string Nome {get;set;}
         public string Email {get;set;}
         public DateTime DataFesta {get;set;}
@@ -14,6 +16,7 @@ namespace RoleTOPMVC.Models
         public string Espacos {get;set;}
         public Cliente Cliente {get;set;}
 
+
         public Evento()
         {
 
@@ -21,6 +24,7 @@ namespace RoleTOPMVC.Models
         
         public Evento (string Nome,string Email,DateTime DataFesta,string TipoFesta,string QuantsPessoas,string Horario,string Servicos,string espacos){
             this.Cliente = new Cliente();
+            this.Status = (uint) StatusEvento.PENDENTE; 
             this.Nome =Nome;
             this.Email=Email;
             this.DataFesta = DataFesta;
@@ -29,7 +33,7 @@ namespace RoleTOPMVC.Models
             this.Horario = Horario;
             this.Servicos=Servicos;
             this.Espacos=espacos;
-            //this.Status = (uint) StatusPedido.PENDENTE; 
+            
         }
     }
 }

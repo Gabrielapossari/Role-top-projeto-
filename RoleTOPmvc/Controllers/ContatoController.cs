@@ -19,7 +19,7 @@ namespace RoleTOPMVC.Controllers
                 UsuarioEmail = ObterUsuarioSession(),
                 UsuarioNome = ObterUsuarioNomeSession()
             });
-            return View();
+            
         }
     }
 }

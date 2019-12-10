@@ -20,19 +20,17 @@ namespace RoleTOPMVC.Repositories
             File.AppendAllLines(PATH, linha);
             return true;
         }
-
-
             public List<Evento> ObterTodos () {
             var linhas = File.ReadAllLines (PATH);
             List<Evento> eventos = new List<Evento>();
 
             foreach (var linha in linhas) {
                 Evento evento = new Evento ();
-                evento.Cliente.Nome = ExtrairValorDoCampo("Nome", linha);
-                evento.Cliente.Email = ExtrairValorDoCampo("Email",linha);
+                evento.Nome = ExtrairValorDoCampo("Nome", linha);
+                evento.Email = ExtrairValorDoCampo("Email",linha);
                 evento.DataFesta = DateTime.Parse(ExtrairValorDoCampo("DataFesta", linha));
                 evento.TipoFesta = ExtrairValorDoCampo("TipoFesta", linha);
-                evento.QuantsPessoas = ExtrairValorDoCampo("Quantspessoas", linha);
+                evento.QuantsPessoas = ExtrairValorDoCampo("QuantsPessoas", linha);
                 evento.Horario = ExtrairValorDoCampo("Horario",linha);
                 evento.Servicos = ExtrairValorDoCampo("Servicos", linha);
                 evento.Espacos = ExtrairValorDoCampo("Espacos", linha);
@@ -44,7 +42,7 @@ namespace RoleTOPMVC.Repositories
             
             Cliente c = evento.Cliente;
 
-            return $"nome={evento.Nome};email={evento.Email};DataFesta={evento.DataFesta};TipoFesta={evento.TipoFesta};QuantsPessoas={evento.QuantsPessoas};Horario={evento.Horario};Servicos={evento.Servicos};Espacos={evento.Espacos}";
+            return $"Nome={evento.Nome};Email={evento.Email};DataFesta={evento.DataFesta};TipoFesta={evento.TipoFesta};QuantsPessoas={evento.QuantsPessoas};Horario={evento.Horario};Servicos={evento.Servicos};Espacos={evento.Espacos}";
         }
     }
 }

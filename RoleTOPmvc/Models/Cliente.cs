@@ -11,7 +11,10 @@ namespace RoleTOPMVC.Models
         public string CPF {get;set;}
         public string Senha {get;set;}
 
+        public uint TipoUsuario {get;set;}
+
         public Cliente (string Nome,string endereco,string telefone,string cpf,string email,string senha){
+            
             this.Nome=Nome;
             this.Endereco=endereco;
             this.Telefone=telefone;

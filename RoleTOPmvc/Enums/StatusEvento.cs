@@ -1,6 +1,6 @@
 namespace RoleTOPMVC.Enums
 {
-    public enum StatusPedido : uint
+    public enum StatusEvento : uint
     {
         PENDENTE = 0,
         APROVADO = 1,
