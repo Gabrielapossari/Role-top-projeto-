@@ -21,6 +21,7 @@ namespace RoleTOPMVC.Repositories
             File.AppendAllLines(PATH, linha);
             return true;
         }
+        
         public Cliente ObterPor (string email)
         {
             var linhas = File.ReadAllLines(PATH);
@@ -35,6 +36,7 @@ namespace RoleTOPMVC.Repositories
                     c.CPF = ExtrairValorDoCampo("cpf", item);
                     c.Email = ExtrairValorDoCampo("email", item);
                     c.Senha = ExtrairValorDoCampo("senha", item);
+                    c.TipoUsuario = uint.Parse(ExtrairValorDoCampo("tipo_usuario", item));
 
                     return c;
                 }
@@ -43,7 +45,7 @@ namespace RoleTOPMVC.Repositories
         }
             private string PrepararRegistroCSV (Cliente cliente)
         {
-            return $"nome={cliente.Nome};endereco={cliente.Endereco};telefone={cliente.Telefone};cpf={cliente.CPF};email={cliente.Email};senha={cliente.Senha}";
+            return $"tipo_usuario={cliente.TipoUsuario};nome={cliente.Nome};endereco={cliente.Endereco};telefone={cliente.Telefone};cpf={cliente.CPF};email={cliente.Email};senha={cliente.Senha}";
         }
 
     }

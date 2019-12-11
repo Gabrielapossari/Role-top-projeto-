@@ -14,6 +14,20 @@ namespace RoleTOPMVC.Repositories
                 File.Create (PATH).Close ();
             }
         }
+        public List<Evento> ObterTodosPorCliente(string emailCliente)
+        {
+            var eventos = ObterTodos();
+            List<Evento> EventosCliente = new List<Evento>();
+
+            foreach (var Evento in eventos)
+            {
+                if(Evento.Email.Equals(emailCliente))
+                {
+                    EventosCliente.Add(Evento);
+                }
+            }
+            return EventosCliente;
+        }
         public bool Inserir (Evento evento) 
         {
             var linha = new string[] { PrepararPedidoCSV(evento) };
@@ -38,11 +52,51 @@ namespace RoleTOPMVC.Repositories
             }
             return eventos;
         }
+        
         private string PrepararPedidoCSV (Evento evento) {
             
             Cliente c = evento.Cliente;
 
-            return $"Nome={evento.Nome};Email={evento.Email};DataFesta={evento.DataFesta};TipoFesta={evento.TipoFesta};QuantsPessoas={evento.QuantsPessoas};Horario={evento.Horario};Servicos={evento.Servicos};Espacos={evento.Espacos}";
+            return $"status_cliente={evento.Status};Nome={evento.Nome};Email={evento.Email};DataFesta={evento.DataFesta};TipoFesta={evento.TipoFesta};QuantsPessoas={evento.QuantsPessoas};Horario={evento.Horario};Servicos={evento.Servicos};Espacos={evento.Espacos}";
+        }
+        public Evento ObterPor(ulong id)
+        {
+            var eventosTotais = ObterTodos();
+            foreach (var evento in eventosTotais)
+            {
+                if(id.Equals(evento.Id))
+                {
+                    return evento;
+                }
+            }
+            return null;
+        }
+
+        public bool Atualizar(Evento evento)
+        {
+            var eventosTotais = File.ReadAllLines(PATH);
+            var eventoCSV = PrepararPedidoCSV(evento);
+            var linhaPedido = -1;
+            var resultado = false;
+            
+            for (int i = 0; i < eventosTotais.Length; i++)
+            {
+                var idConvertido = ulong.Parse(ExtrairValorDoCampo("id", eventosTotais[i]));
+                if(evento.Id.Equals(idConvertido))
+                {
+                    linhaPedido = i;
+                    resultado = true;
+                    break;
+                }
+            }
+
+            if(resultado)
+            {
+                eventosTotais[linhaPedido] = eventoCSV;
+                File.WriteAllLines(PATH, eventosTotais);
+            }
+
+            return resultado;
         }
     }
 }

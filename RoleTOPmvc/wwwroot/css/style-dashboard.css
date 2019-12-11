@@ -18,7 +18,7 @@ h3 {
     text-shadow: 
     -1px -1px 0 #fff,
     1px -1px 0 #fff,
-   -1px  1px 0 #fff,
+    -1px  1px 0 #fff,
     1px  1px 0 #fff;
 }
 
@@ -27,25 +27,25 @@ h4 {
     font-family: 'Fredoka One', cursive;
 }
 
-.box-status-pedidos {
+.box-status-eventos {
     width: 30%;
     padding-top: .5em;
     text-align: center;
 }
-.box-status-pedidos > p {
+.box-status-eventos > p {
     font-size: 2em;
     padding: 0.5em 0 0 0;
 }
 
-.box-status-pedidos.reprovados {
+.box-status-eventos.reprovados {
     background-color: #a70000;
 }
 
-.box-status-pedidos.aprovados {
+.box-status-eventos.aprovados {
     background-color: #669100;
 }
 
-.box-status-pedidos.pendentes {
+.box-status-eventos.pendentes {
     background-color: #ff9933;
 }
 
@@ -60,6 +60,10 @@ table {
 
 table th {
     background-color:#a70000;
+}
+header{
+    background-image: url(festas02.jpg)
+    
 }
 
 table a {
@@ -91,4 +95,7 @@ thead > tr:first-child > th:last-child {
     }
 
 
+}
+html,body{
+    height: 100%;
 }

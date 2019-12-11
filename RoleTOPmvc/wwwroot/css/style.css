@@ -1,3 +1,50 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav #bt-mobile-menu {
+    display: none;
+}
+
+header{
+    background-image: url(festas02.jpg)
+    
+}
+td {
+    color:black;
+}
+/* nav ul{
+    display: flex;                  /* arruma o menu na horizontal/
+    flex-direction: row;
+    list-style-type: none;          / tira as bolinhas da lista/
+    font-size: 1.3em;               / muda o tamanho da fonte - "em" considera o tamanho padrão do "celular" - 1 "em" equivale ao tamanho padrão/
+    height: 2.3em;                  / espaçamento, altura/
+    align-items: center;            / centraliza o texto no centro vertical/ 
+    
+    justify-content: space-between; /divide os ítens com espaços iguais deixando uma margem no início e no fim*
+    
+} */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+    list-style-type: none;
+}
+nav a {                             /* "a" = link*/
+    text-decoration: none;          /*tira o risco de baixo do link*/
+    color: oldlace;             /*muda a cor do texto*/    
+    padding: .65em 3em;             /*quanto que será selecionado quando se passar o mouse por cima - vermelho - acaba dando um maior espaçamento no texto*/ 
+    font-weight: bold;              /*negrito*/
+}
+h3{
+    color: red;
+}
 nav #bt-mobile-menu {
     display: none;
 }
@@ -48,5 +95,44 @@ nav ul {
         color: #fff;
         font-weight: bold;
         background-color: coral;
+    }
+    @media screen and (max-width: 1073px){
+        .Solicite {
+            text-align: center;
+            color:white;
+            background-color: black;
+            
+        }
+        .menu{
+            display:block;
+        }
+        /*****************************************************************************
+                                        NAV -MOBILE 
+        *****************************************************************************/
+        
+        nav #bt-mobile-menu {
+            display:block;   
+        }
+        nav .bt-common-menu {
+            display: none;
+        }
+        nav .bt-common-menu.active {
+            display:block;
+        }
+        
+        nav ul.mobile-mode {
+            display:flex;
+            flex-direction:column;
+        }
+        nav ul > li > a {
+            display: block;
+            padding: 0.4em;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            background-color:red;
+            flex-direction: column;
+            width: 1000%;
+        }
     }
 }

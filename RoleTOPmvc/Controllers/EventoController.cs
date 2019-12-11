@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RoleTOPMVC.Models;
 using RoleTOPMVC.ViewModels;
+using RoleTOPMVC.Enums;
 
 namespace RoleTOPMVC.Controllers
 {
@@ -49,6 +50,48 @@ namespace RoleTOPMVC.Controllers
                 System.Console.WriteLine(e.StackTrace);
                 return View("Erro", new RespostaViewModel("Não foi possivel cadastrar o evento!"));
             }
+        }
+        
+        public IActionResult Aprovar(ulong id)
+        {
+            var evento = eventoRepository.ObterPor(id);
+            evento.Status = (uint) StatusEvento.APROVADO;
+
+            if(eventoRepository.Atualizar(evento))
+            {
+                return RedirectToAction("Dashboard", "Administrador");
+            }
+            else
+            {
+                return View("Erro", new RespostaViewModel("Não foi possível aprovar este pedido")
+                {
+                    NomeView = "Dashboard",
+                    UsuarioEmail = ObterUsuarioSession(),
+                    UsuarioNome = ObterUsuarioNomeSession()
+                });
+            }
+
+        }
+
+        public IActionResult Reprovar(ulong id)
+        {
+            var evento = eventoRepository.ObterPor(id);
+            evento.Status = (uint) StatusEvento.REPROVADO;
+
+            if(eventoRepository.Atualizar(evento))
+            {
+                return RedirectToAction("Dashboard", "Administrador");
+            }
+            else
+            {
+                return View("Erro", new RespostaViewModel("Não foi possível reprovar este pedido")
+                {
+                    NomeView = "Dashboard",
+                    UsuarioEmail = ObterUsuarioSession(),
+                    UsuarioNome = ObterUsuarioNomeSession()
+                });
+            }
+
         }
     }
 }

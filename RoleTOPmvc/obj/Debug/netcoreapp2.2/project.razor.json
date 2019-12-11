@@ -3049,6 +3049,11 @@
       "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPMVC\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\49541849830\\Documents\\Role-top-projeto-\\RoleTOPMVC\\Views\\Historico\\Historico.cshtml",
+      "TargetPath": "Views\\Historico\\Historico.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"

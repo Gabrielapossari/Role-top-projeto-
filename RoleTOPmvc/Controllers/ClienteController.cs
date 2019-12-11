@@ -2,6 +2,7 @@ using System;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RoleTOPMVC.Controllers;
+using RoleTOPMVC.Enums;
 using RoleTOPMVC.Models;
 using RoleTOPMVC.Repositories;
 using RoleTOPMVC.ViewModels;
@@ -12,65 +13,37 @@ namespace RoleTOPMVC.Controllers
     public class ClienteController : AbstractController
 
     {
+        private EventoRepository eventoRepository = new EventoRepository();
         private ClienteRepository clienteRepository = new ClienteRepository ();
         [HttpGet]
-        public IActionResult Login () {
+        public IActionResult Index () {
             return View (new BaseViewModel () {
-                NomeView = "Login",
+                    NomeView = "Cliente",
                     UsuarioEmail = ObterUsuarioSession (),
                     UsuarioNome = ObterUsuarioNomeSession ()
             });
         }
-        [HttpPost]
-        public IActionResult Login (IFormCollection form) {
-            ViewData["Action"] = "index";
-            try {
-                System.Console.WriteLine ("==================");
-                System.Console.WriteLine (form["nome"]);
-                System.Console.WriteLine (form["senha"]);
-                System.Console.WriteLine ("==================");
+        
+    
+        public IActionResult Historico ()
+        {
+            var emailCliente = ObterUsuarioSession();
+            var  EventosCliente = eventoRepository.ObterTodosPorCliente(emailCliente);
 
-                var usuario = form["nome"];
-                var senha = form["senha"];
-
-                var cliente = clienteRepository.ObterPor (usuario);
-
-                if (cliente != null) {
-                    if (cliente.Senha.Equals (senha)) {
-                        HttpContext.Session.SetString (SESSION_CLIENTE_EMAIL, usuario);
-                        HttpContext.Session.SetString (SESSION_CLIENTE_NOME, cliente.Nome);
-                        if (ObterUsuarioSession () == "admin@hotmail.com") {
-                            return RedirectToAction("Dashboard","Administrador");
-                            
-                        } else {
-                            return View ("Index", new BaseViewModel () {
-                                NomeView = "Index",
-                                    UsuarioEmail = ObterUsuarioSession (),
-                                    UsuarioNome = ObterUsuarioNomeSession ()
-                            });
-                        }
-                    } else {
-                        return View ("Erro", new RespostaViewModel ("Senha incorreta"));
-                    }
-                } else {
-                    return View ("Erro", new RespostaViewModel ($"Usuário {usuario} não encontrado"));
-                }
-            } catch (Exception e) {
-                System.Console.WriteLine (e.StackTrace);
-                System.Console.WriteLine ();
-                System.Console.WriteLine ();
-                System.Console.WriteLine ();
-                System.Console.WriteLine ();
-                System.Console.WriteLine ();
-                System.Console.WriteLine ();
-                return View ("Index", "Cliente");
-            }
+            return View(new HistoricoViewModel()
+            {
+                Eventos  = EventosCliente,
+                NomeView = "Historico",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession()
+        });
         }
-        public IActionResult Logoff () {
-            HttpContext.Session.Remove (SESSION_CLIENTE_EMAIL);
-            HttpContext.Session.Remove (SESSION_CLIENTE_NOME);
-            HttpContext.Session.Clear ();
-            return RedirectToAction ("Index", "Home");
+        public IActionResult Logoff()
+        {
+            HttpContext.Session.Remove(SESSION_CLIENTE_EMAIL);
+            HttpContext.Session.Remove(SESSION_CLIENTE_NOME);
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

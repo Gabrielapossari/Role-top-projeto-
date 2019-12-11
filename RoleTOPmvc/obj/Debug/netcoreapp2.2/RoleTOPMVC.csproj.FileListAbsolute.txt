@@ -98,3 +98,4 @@ C:\Users\49541849830\Documents\Role-top-projeto-\RoleTOPMVC\obj\Debug\netcoreapp
 C:\Users\49541849830\Documents\Role-top-projeto-\RoleTOPMVC\obj\Debug\netcoreapp2.2\Razor\Views\Cliente\index.g.cshtml.cs
 C:\Users\49541849830\Documents\Role-top-projeto-\RoleTOPMVC\obj\Debug\netcoreapp2.2\Razor\Views\Registrar\index.g.cshtml.cs
 C:\Users\49541849830\Documents\Role-top-projeto-\RoleTOPMVC\obj\Debug\netcoreapp2.2\Razor\Views\Administrador\Dashboard.g.cshtml.cs
+C:\Users\49541849830\Documents\Role-top-projeto-\RoleTOPMVC\obj\Debug\netcoreapp2.2\Razor\Views\Historico\Historico.g.cshtml.cs

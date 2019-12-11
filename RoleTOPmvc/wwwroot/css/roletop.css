@@ -13,6 +13,9 @@ header{
     background-image: url(festas02.jpg)
     
 }
+td {
+    color:black;
+}
 /* nav ul{
     display: flex;                  /* arruma o menu na horizontal/
     flex-direction: row;
@@ -157,6 +160,7 @@ br {
     line-height: 200%;
     
 }
+
 h5 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 200%;
