@@ -13,6 +13,7 @@ namespace RoleTOPMVC.ViewModels
         public DashboardViewModel()
         {
             this.Eventos = new List<Evento>();
+            
         }
 
     }

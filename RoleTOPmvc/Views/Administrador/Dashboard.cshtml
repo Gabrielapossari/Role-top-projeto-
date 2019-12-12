@@ -51,8 +51,8 @@
                     @foreach(var Evento in Model.Eventos)
                     {
                         <tr>
-                            <td>@Evento.Nome</td>
-                            <td>@Evento.Email</td>
+                            <td>@Evento.Cliente.Nome</td>
+                            <td>@Evento.Cliente.Email</td>
                             <td>@Evento.TipoFesta</td>
                             <td>@Evento.Horario</td>
                             <td><a href='@Url.Action("Aprovar", "Evento", new {Id = @Evento.Id})'><i class="fas fa-check"></i></a></td>

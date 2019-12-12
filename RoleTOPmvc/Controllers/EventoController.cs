@@ -22,7 +22,9 @@ namespace RoleTOPMVC.Controllers
         {
             return View(new BaseViewModel()
             {
-                NomeView = "Evento"
+                NomeView = "Evento",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession()
             });
         }
 
@@ -30,21 +32,26 @@ namespace RoleTOPMVC.Controllers
             public IActionResult CadastrarEvento(IFormCollection form)
             {
                 try {
+                    Cliente cliente = new Cliente()
+                    {
+                    Nome = form["Nome"],
+                    Email = form["Email"]
+                    };
                     Evento evento = new Evento
-                    (
+                    ( 
                     // clienterepository.ObterPor(ObterUsuarioSession()),
-                    form["Nome"],
-                    form["Email"],
                     DateTime.Parse(form["DataFesta"]),
                     form["TipoFesta"],
                     form["QuantsPessoas"],
                     form["Horario"],
                     form["Servicos"],
                     form["Espacos"]);
+                    evento.Cliente = cliente;
                     eventoRepository.Inserir(evento);
                     
                 return View("Sucesso", new RespostaViewModel("Evento cadastrado!"));
             } 
+        
             catch(Exception e)
             {
                 System.Console.WriteLine(e.StackTrace);
@@ -52,12 +59,12 @@ namespace RoleTOPMVC.Controllers
             }
         }
         
-        public IActionResult Aprovar(ulong id)
+        public IActionResult Aprovar(ulong Id)
         {
-            var evento = eventoRepository.ObterPor(id);
-            evento.Status = (uint) StatusEvento.APROVADO;
+            var eventos = eventoRepository.ObterPor(Id);
+            eventos.Status = (uint) StatusEvento.APROVADO;
 
-            if(eventoRepository.Atualizar(evento))
+            if(eventoRepository.Atualizar(eventos))
             {
                 return RedirectToAction("Dashboard", "Administrador");
             }
@@ -73,9 +80,9 @@ namespace RoleTOPMVC.Controllers
 
         }
 
-        public IActionResult Reprovar(ulong id)
+        public IActionResult Reprovar(ulong Id)
         {
-            var evento = eventoRepository.ObterPor(id);
+            var evento = eventoRepository.ObterPor(Id);
             evento.Status = (uint) StatusEvento.REPROVADO;
 
             if(eventoRepository.Atualizar(evento))

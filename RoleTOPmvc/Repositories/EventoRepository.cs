@@ -11,7 +11,7 @@ namespace RoleTOPMVC.Repositories
         private const string PATH = "Database/evento.csv";
         public EventoRepository () {
             if (!File.Exists (PATH)) {
-                File.Create (PATH).Close ();
+                File.Create (PATH).Close();
             }
         }
         public List<Evento> ObterTodosPorCliente(string emailCliente)
@@ -21,27 +21,30 @@ namespace RoleTOPMVC.Repositories
 
             foreach (var Evento in eventos)
             {
-                if(Evento.Email.Equals(emailCliente))
+                if(Evento.Cliente.Email.Equals(emailCliente))
                 {
                     EventosCliente.Add(Evento);
                 }
             }
             return EventosCliente;
         }
-        public bool Inserir (Evento evento) 
-        {
-            var linha = new string[] { PrepararPedidoCSV(evento) };
-            File.AppendAllLines(PATH, linha);
+            public bool Inserir (Evento evento) {
+            var quantidadePedidos = File.ReadAllLines(PATH).Length;
+            evento.Id = (ulong) ++quantidadePedidos; 
+            var linha = new string[] {PrepararPedidoCSV (evento) };
+            File.AppendAllLines (PATH,linha);
+
             return true;
         }
-            public List<Evento> ObterTodos () {
+            public List<Evento> ObterTodos() {
             var linhas = File.ReadAllLines (PATH);
             List<Evento> eventos = new List<Evento>();
-
             foreach (var linha in linhas) {
                 Evento evento = new Evento ();
-                evento.Nome = ExtrairValorDoCampo("Nome", linha);
-                evento.Email = ExtrairValorDoCampo("Email",linha);
+                evento.Id = ulong.Parse(ExtrairValorDoCampo("Id", linha));
+                evento.Status = uint.Parse(ExtrairValorDoCampo("status_cliente", linha));
+                evento.Cliente.Nome = ExtrairValorDoCampo("Nome", linha);
+                evento.Cliente.Email = ExtrairValorDoCampo("Email",linha);
                 evento.DataFesta = DateTime.Parse(ExtrairValorDoCampo("DataFesta", linha));
                 evento.TipoFesta = ExtrairValorDoCampo("TipoFesta", linha);
                 evento.QuantsPessoas = ExtrairValorDoCampo("QuantsPessoas", linha);
@@ -52,26 +55,18 @@ namespace RoleTOPMVC.Repositories
             }
             return eventos;
         }
-        
-        private string PrepararPedidoCSV (Evento evento) {
-            
-            Cliente c = evento.Cliente;
-
-            return $"status_cliente={evento.Status};Nome={evento.Nome};Email={evento.Email};DataFesta={evento.DataFesta};TipoFesta={evento.TipoFesta};QuantsPessoas={evento.QuantsPessoas};Horario={evento.Horario};Servicos={evento.Servicos};Espacos={evento.Espacos}";
-        }
-        public Evento ObterPor(ulong id)
+        public Evento ObterPor(ulong Id)
         {
             var eventosTotais = ObterTodos();
             foreach (var evento in eventosTotais)
             {
-                if(id.Equals(evento.Id))
+                if(Id.Equals(evento.Id))
                 {
                     return evento;
                 }
             }
             return null;
         }
-
         public bool Atualizar(Evento evento)
         {
             var eventosTotais = File.ReadAllLines(PATH);
@@ -81,7 +76,7 @@ namespace RoleTOPMVC.Repositories
             
             for (int i = 0; i < eventosTotais.Length; i++)
             {
-                var idConvertido = ulong.Parse(ExtrairValorDoCampo("id", eventosTotais[i]));
+                var idConvertido = ulong.Parse(ExtrairValorDoCampo("Id", eventosTotais[i]));
                 if(evento.Id.Equals(idConvertido))
                 {
                     linhaPedido = i;
@@ -97,6 +92,12 @@ namespace RoleTOPMVC.Repositories
             }
 
             return resultado;
+        }
+        private string PrepararPedidoCSV (Evento evento) {
+            
+            Cliente c = evento.Cliente;
+
+            return $"Id={evento.Id};status_cliente={evento.Status};Nome={evento.Cliente.Nome};Email={evento.Cliente.Email};DataFesta={evento.DataFesta};TipoFesta={evento.TipoFesta};QuantsPessoas={evento.QuantsPessoas};Horario={evento.Horario};Servicos={evento.Servicos};Espacos={evento.Espacos}";
         }
     }
 }

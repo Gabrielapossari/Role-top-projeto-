@@ -8,7 +8,6 @@ using RoleTOPMVC.Repositories;
 using RoleTOPMVC.ViewModels;
 
 namespace RoleTOPMVC.Controllers
-
 {
     public class ClienteController : AbstractController
 
@@ -17,19 +16,19 @@ namespace RoleTOPMVC.Controllers
         private ClienteRepository clienteRepository = new ClienteRepository ();
         [HttpGet]
         public IActionResult Index () {
-            return View (new BaseViewModel () {
+            var emailCliente = ObterUsuarioSession();
+            var  EventosCliente = eventoRepository.ObterTodosPorCliente(emailCliente);
+            return View (new HistoricoViewModel () {
+                    Evento  = EventosCliente,
                     NomeView = "Cliente",
                     UsuarioEmail = ObterUsuarioSession (),
-                    UsuarioNome = ObterUsuarioNomeSession ()
+                    UsuarioNome = ObterUsuarioNomeSession (),
             });
         }
-        
-    
         public IActionResult Historico ()
         {
             var emailCliente = ObterUsuarioSession();
             var  EventosCliente = eventoRepository.ObterTodosPorCliente(emailCliente);
-
             return View(new HistoricoViewModel()
             {
                 Eventos  = EventosCliente,

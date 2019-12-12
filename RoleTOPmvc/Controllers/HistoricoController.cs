@@ -9,7 +9,7 @@ using RoleTOPMVC.ViewModels;
 
 namespace RoleTOPMVC.Controllers
 {
-    public class HistoricoControler : AbstractController 
+    public class HistoricoController : AbstractController 
     {
         public IActionResult Historico()
         {
@@ -17,9 +17,11 @@ namespace RoleTOPMVC.Controllers
             {
                 NomeView = "Historico",
                 UsuarioEmail = ObterUsuarioSession(),
-                UsuarioNome = ObterUsuarioNomeSession()
+                UsuarioNome = ObterUsuarioNomeSession(),
+                TiposUsuario = 0
             });
             
         }
+        
     }
 }

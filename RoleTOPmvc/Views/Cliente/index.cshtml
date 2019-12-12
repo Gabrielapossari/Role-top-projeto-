@@ -1,37 +1,17 @@
-<DOCTYPE! html>
-    <html lang="pt-bt">
-    <meta charset="utf-8">
-
-    <head>
-        <title> Rolê TOP</title>
-        <link rel="stylesheet" type="text/css" href="~/css/cadastro.css">
-        <link rel="stylesheet" type="text/css" href="~/css/roletop.css">
-        <link rel="stylesheet" type="text/css" href="~/css/style.css">
-        
-    </head>
-
+@model RoleTOPMVC.ViewModels.HistoricoViewModel
     <body>
         <div class="áreadocliente">
 
             <h5>Área do cliente</h5>
-            <br>
-            <label for="nome">Nome Completo:</label>
-            <input id="nome" name="Nome" maxlength="20" minlength="3" placeholder="Usuário" autofocus>
-            <br>
-            <br>
-            Data do evento:
-            <input type="date" name="DataFesta" required>
-            <br>
-            <br>
 
-            <label for="Horario">Horário do evento:</label>
-            <input id="nome" name="Horario" maxlength="20" minlength="3" placeholder="00:00" autofocus>
-
-            <br>
-            <br>
-            <label for="situacao">Situação:</label>
-            <input id="nome" name="status_cliente" maxlength="20" minlength="3" placeholder="Aceito/Recusado" autofocus>
-            <br>
+            @foreach(var Eventos in Model.Evento) {
+                <tr>
+                    <td>@Eventos.Horario</td>
+                    <td>@Eventos.DataFesta</td>
+                    <td>@Eventos.TipoFesta</td>
+                    <td>@Eventos.Status</td>
+                </tr>
+            }
         </div>
     
         <div class="Solicite">

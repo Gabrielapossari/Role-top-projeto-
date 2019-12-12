@@ -1,6 +1,2 @@
-tipo_usuario=1;nome=JJJJJJJJ;endereco=JJJJJJJJJJJJJJ;telefone=JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ;cpf=JJJJJJJJJJJJJJJJJJJ;email=JJJJJJJJJJ;senha=JJJJJJJJJJJJJJJJJ
-tipo_usuario=1;nome=gabriela;endereco=jjjjjjjj;telefone=jjjjjjjjjjjjjj;cpf=jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj;email=gabriela@hotmail.com;senha=123456
-tipo_usuario=0;nome=admin;endereco=jjjjjjjjj;telefone=jjjjjjjjjjjjjjjj;cpf=jjjjjjjjjjjjjjjjjjjjjjjj;email=admin@hotmail.com;senha=123123
-tipo_usuario=1;nome=kkkkkkkkkkkk;endereco=kkkkkkkkkkkkk;telefone=kkkkkkkkkkkkkk;cpf=kkkkkkkkkkkkk;email=kkkkkkkkkkkkk;senha=kkkkkkkkkkkkk
-tipo_usuario=1;nome=lllllllllllllll;endereco=lllllllll;telefone=lllllllllllllll;cpf=lllllllllllll;email=llllllllllll;senha=lllllllllllllll
-tipo_usuario=1;nome=hhhhhhhhhh;endereco=hhhhhhhhhhhhhhhhhhhhhhhhhhhhhh;telefone=hhhhhhhhhhhhhh;cpf=hhhhhhhhhhhhhh;email=hhhhhhhhhhhhhhhh;senha=hhhhhhhhhhhhhhh
+tipo_usuario=1;nome=gabriela;endereco=ooooo;telefone=ooooooooo;cpf=oooooooooo;email=gabriela@hotmail.com;senha=123456
+tipo_usuario=0;nome=admin;endereco=ggg;telefone=ggg;cpf=gg;email=admin@hotmail.com;senha=123123

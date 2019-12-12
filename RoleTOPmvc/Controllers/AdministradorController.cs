@@ -14,15 +14,17 @@ namespace RoleTOPMVC.Controllers {
             if (!ninguemLogado && 
             (uint) TiposUsuario.ADMINISTRADOR == uint.Parse(ObterUsuarioTipoSession())) {
 
-                var eventos = eventoRepository.ObterTodos ();
+                var eventos = eventoRepository.ObterTodos();
                 DashboardViewModel dashboardViewModel = new DashboardViewModel ();
 
                 foreach (var evento in eventos ) {
                         switch (evento.Status) {
                             case (uint) StatusEvento.APROVADO:
+                            
                                 dashboardViewModel.EventosAprovados++;
                                 break;
                             case (uint) StatusEvento.REPROVADO:
+                            
                                 dashboardViewModel.EventosReprovados++;
                                 break;
                             default:
@@ -33,6 +35,7 @@ namespace RoleTOPMVC.Controllers {
                 }
                 dashboardViewModel.NomeView = "Dashboard";
                 dashboardViewModel.UsuarioEmail = ObterUsuarioSession ();
+                dashboardViewModel.TiposUsuario = 0;
 
                 return View (dashboardViewModel);
             } 
