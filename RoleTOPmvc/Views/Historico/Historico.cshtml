@@ -4,24 +4,24 @@
     <table>
         <thead>
             <tr>
-                <th>Data</th>
-                <th>Hamburguer</th>
-                <th>Shake</th>
-                <th>Preço</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Tipo de Festa</th>
+                <th>Horario</th>
             </tr>
         </thead>
         <tbody>
-            @foreach(var Evento in Model.Eventos)
+            @foreach(var Eventos in Model.Evento)
                     {
                         <tr>
 
-                            <td>@Evento.Cliente.Nome</td>
+                            <td>@Eventos.Cliente.Nome</td>
 
-                            <td>@Evento.Cliente.Email</td>
+                            <td>@Eventos.Cliente.Email</td>
 
-                            <td>@Evento.TipoFesta</td>
+                            <td>@Eventos.TipoFesta</td>
                             
-                            <td>@Evento.Horario</td>
+                            <td>@Eventos.Horario</td>
                             
                         </tr>
                     }

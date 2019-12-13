@@ -6,13 +6,13 @@
                     <h5>Contratar o serviço</h5>
                 <br>
                 <label for="Nome">Nome:</label>
-                <input id="nome" name="Nome" maxlength="20" minlength="3" placeholder="Escreva seu nome" required value="@Model.cliente.Nome">
+                <input id="nome" type="text" name="Nome" maxlength="20" minlength="3" placeholder="Escreva seu nome" required value="@Model.cliente.Nome">
                 </br>
                 </br>
                 <br>
 
                 <label for="Email">Email</label>
-                <input  name="Email" placeholder="Rolêtop@hotmail.com" required value="@Model.cliente.Email">
+                <input type="Email" name="Email" placeholder="Rolêtop@hotmail.com" required value="@Model.cliente.Email">
                 <br>
         
                 </br>
@@ -22,7 +22,7 @@
             <br>
 
                 <label for="TipoFesta">Tipo de festa</label>
-                <select name="TipoFesta" required>
+                <select type="TipoFesta" name="TipoFesta" required>
                     <br>
                     <br>
                     <option value="Selecione" disabled selected>Selecione</option>
@@ -37,11 +37,11 @@
             <div id="tabela03">
 
                 <label for="QuantsPessoas">Qtde de pessoas</label>
-                <input class="inputcontratar"  name ="QuantsPessoas" maxlength="20" minlength="3" placeholder="123" required>
+                <input class="inputcontratar" type="QuatsPessoas" name ="QuantsPessoas" maxlength="20" minlength="3" placeholder="123" required>
                 <br>
                 <br>
                 <label for="Horario">Horário da festa</label>
-                <input class="inputcontratar"  name="Horario" maxlength="20" minlength="3" placeholder="00:00"
+                <input class="inputcontratar" type="Horario"  name="Horario" maxlength="20" minlength="3" placeholder="00:00"
                     required>
                 
             </div>

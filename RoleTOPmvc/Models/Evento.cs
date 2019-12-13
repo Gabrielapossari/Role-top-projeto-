@@ -14,12 +14,10 @@ namespace RoleTOPMVC.Models
         public string Servicos {get;set;}
         public string Espacos {get;set;}
         public Cliente Cliente {get;set;}
-
-
         public Evento()
         {
             this.Cliente = new Cliente();
-            
+
         }
         
         public Evento (DateTime DataFesta,string TipoFesta,string QuantsPessoas,string Horario,string Servicos,string espacos){

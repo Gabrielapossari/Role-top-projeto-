@@ -1,3 +1,8 @@
-Id=1;status_cliente=0;Nome=gabriela;Email=gabriela@hotmail.com;DataFesta=09/08/8989 00:00:00;TipoFesta=baile;QuantsPessoas=09909;Horario=09909;Servicos=Iluminação;Espacos=Cozinha
-Id=2;status_cliente=0;Nome=gabriela;Email=gabriela@hotmail.com;DataFesta=09/08/9899 00:00:00;TipoFesta=formatura;QuantsPessoas=988;Horario=099;Servicos=Iluminação;Espacos=Palco
-Id=3;status_cliente=0;Nome=gabriela;Email=gabriela@hotmail.com;DataFesta=09/09/9999 00:00:00;TipoFesta=formatura;QuantsPessoas=0-909;Horario=0909;Servicos=Show;Espacos=Cozinha
+Id=1;status_cliente=1;Nome=gabriela;Email=gabriela@hotmail.com;DataFesta=09/08/8989 00:00:00;TipoFesta=baile;QuantsPessoas=09909;Horario=09909;Servicos=Iluminação;Espacos=Cozinha
+Id=2;status_cliente=1;Nome=gabriela;Email=gabriela@hotmail.com;DataFesta=09/08/9899 00:00:00;TipoFesta=formatura;QuantsPessoas=988;Horario=099;Servicos=Iluminação;Espacos=Palco
+Id=3;status_cliente=1;Nome=gabriela;Email=gabriela@hotmail.com;DataFesta=09/09/9999 00:00:00;TipoFesta=formatura;QuantsPessoas=0-909;Horario=0909;Servicos=Show;Espacos=Cozinha
+Id=4;status_cliente=2;Nome=julia;Email=julia@hotmail.com;DataFesta=09/08/9888 00:00:00;TipoFesta=formatura;QuantsPessoas=988;Horario=989;Servicos=Iluminação;Espacos=Cozinha
+Id=5;status_cliente=1;Nome=julia;Email=julia@hotmail.com;DataFesta=01/01/0999 00:00:00;TipoFesta=formatura;QuantsPessoas=999;Horario=999;Servicos=Iluminação;Espacos=Cozinha
+Id=6;status_cliente=1;Nome=julia;Email=julia@hotmail.com;DataFesta=01/01/7777 00:00:00;TipoFesta=formatura;QuantsPessoas=777;Horario=778;Servicos=Nenhum;Espacos=Cozinha
+Id=7;status_cliente=2;Nome=gabriela;Email=gabriela@hotmail.com;DataFesta=09/08/0988 00:00:00;TipoFesta=show;QuantsPessoas=989;Horario=899;Servicos=Iluminação;Espacos=Cozinha
+Id=8;status_cliente=0;Nome=gabriela;Email=gabriela@hotmail.com;DataFesta=09/09/0999 00:00:00;TipoFesta=formatura;QuantsPessoas=0909;Horario=0990;Servicos=Iluminação;Espacos=Cozinha
