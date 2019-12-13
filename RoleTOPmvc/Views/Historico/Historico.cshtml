@@ -1,7 +1,7 @@
 @model RoleTOPMVC.ViewModels.HistoricoViewModel
 <main>
-    <h2>@ViewData["H2"]</h2>
-    <table>
+    
+    <table> 
         <thead>
             <tr>
                 <th>Nome</th>
@@ -14,15 +14,20 @@
             @foreach(var Eventos in Model.Evento)
                     {
                         <tr>
+                            <td>@Eventos.Id</td>
+
+                            <td>@Eventos.QuantsPessoas</td>
+
+                            <td>@Eventos.Servicos</td>
+                            
+                            <td>@Eventos.Horario</td>
 
                             <td>@Eventos.Cliente.Nome</td>
 
                             <td>@Eventos.Cliente.Email</td>
 
-                            <td>@Eventos.TipoFesta</td>
-                            
-                            <td>@Eventos.Horario</td>
-                            
+                            <td>@Eventos.Cliente</td>
+                        
                         </tr>
                     }
         </tbody>
